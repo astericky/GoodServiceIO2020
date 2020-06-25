@@ -23,6 +23,11 @@ extension RouteList {
             List(content: content)
                 .listStyle(PlainListStyle())
                 .navigationBarTitle(Text("Trains"))
+                .navigationBarItems(trailing: VStack {
+                    Button(action: {}, label: {
+                        Image(systemName: "info.circle")
+                    })
+                })
         }
     }
     
