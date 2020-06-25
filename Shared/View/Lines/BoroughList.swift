@@ -14,6 +14,15 @@ struct BoroughList: View {
         NavigationView {
             List(content: content)
                 .navigationTitle(Text("Boroughs"))
+                .navigationBarItems(leading: VStack{
+                    Text("status for new york city subway")
+                        .font(.caption)
+                },
+                trailing: VStack {
+                    Button(action: {}, label: {
+                        Image(systemName: "info.circle")
+                    })
+                })
         }
     }
 }

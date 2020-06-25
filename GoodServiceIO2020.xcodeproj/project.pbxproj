@@ -52,6 +52,7 @@
 		2AF2D2BA24A446BE009206F9 /* HorizontalRouteList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF2D2B924A446BE009206F9 /* HorizontalRouteList.swift */; };
 		2AF2D2BC24A44784009206F9 /* LineRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF2D2BB24A44784009206F9 /* LineRow.swift */; };
 		2AF2D2BE24A4499A009206F9 /* StatusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF2D2BD24A4499A009206F9 /* StatusBar.swift */; };
+		2AF2D2C024A510ED009206F9 /* GoodServiceNavigationBarItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF2D2BF24A510ED009206F9 /* GoodServiceNavigationBarItems.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,6 +125,7 @@
 		2AF2D2B924A446BE009206F9 /* HorizontalRouteList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalRouteList.swift; sourceTree = "<group>"; };
 		2AF2D2BB24A44784009206F9 /* LineRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineRow.swift; sourceTree = "<group>"; };
 		2AF2D2BD24A4499A009206F9 /* StatusBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBar.swift; sourceTree = "<group>"; };
+		2AF2D2BF24A510ED009206F9 /* GoodServiceNavigationBarItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodServiceNavigationBarItems.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -282,6 +284,7 @@
 			isa = PBXGroup;
 			children = (
 				2ACC219624A16C78005B36D0 /* GoodServiceTabView.swift */,
+				2AF2D2BF24A510ED009206F9 /* GoodServiceNavigationBarItems.swift */,
 				2ACC220624A193FC005B36D0 /* Trains */,
 				2ACC220724A19405005B36D0 /* Lines */,
 				2ACC220824A1940F005B36D0 /* SlowZones */,
@@ -500,6 +503,7 @@
 				2AF2D2B624A44468009206F9 /* SlowZoneList.swift in Sources */,
 				2ACC220F24A19A27005B36D0 /* RouteRow.swift in Sources */,
 				2ACC21D424A17893005B36D0 /* Double+format.swift in Sources */,
+				2AF2D2C024A510ED009206F9 /* GoodServiceNavigationBarItems.swift in Sources */,
 				2ACC21E124A17C00005B36D0 /* GoodServiceError.swift in Sources */,
 				2ACC22EB24A2D274005B36D0 /* BoroughList.swift in Sources */,
 				2AF2D2B824A444E2009206F9 /* LineDetail.swift in Sources */,

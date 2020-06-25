@@ -21,9 +21,13 @@ extension RouteList {
     private var routeList: some View {
         NavigationView {
             List(content: content)
-                .listStyle(PlainListStyle())
+//                .listStyle(PlainListStyle())
                 .navigationBarTitle(Text("Trains"))
-                .navigationBarItems(trailing: VStack {
+                .navigationBarItems(leading: VStack{
+                    Text("status of new york city subway")
+                        .font(.caption)
+                },
+                trailing: VStack {
                     Button(action: {}, label: {
                         Image(systemName: "info.circle")
                     })
