@@ -16,7 +16,13 @@ struct BoroughDetail: View {
                 LineRow(line: line)
             }
         }
+        .listStyle(InsetGroupedListStyle())
         .navigationBarTitle(Text(borough.name))
+        .navigationBarItems(trailing: VStack {
+            Button(action: {}, label: {
+                Image(systemName: "info.circle")
+            })
+        })
     }
 }
 
