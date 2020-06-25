@@ -21,7 +21,6 @@ extension RouteList {
     private var routeList: some View {
         NavigationView {
             List(content: content)
-//                .listStyle(PlainListStyle())
                 .navigationBarTitle(Text("Trains"))
                 .navigationBarItems(leading: VStack{
                     Text("status of new york city subway")
