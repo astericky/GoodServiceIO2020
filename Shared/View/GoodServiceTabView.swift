@@ -61,6 +61,10 @@ extension GoodServiceTabView {
 struct GoodServiceTabView_Previews: PreviewProvider {
     static var previewViewModel = RouteInfoViewModel()
     static var previews: some View {
-        GoodServiceTabView(routeInfoViewModel: previewViewModel)
+        Group {
+            GoodServiceTabView(routeInfoViewModel: previewViewModel)
+//            GoodServiceTabView(routeInfoViewModel: previewViewModel)
+//                .previewDevice("iPad Pro (9.7-inch)")
+        }
     }
 }

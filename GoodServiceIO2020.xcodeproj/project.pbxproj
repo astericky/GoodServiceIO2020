@@ -73,6 +73,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2A1BFD4E24A5702E00703EAB /* good-service-iPhone-screen-slow-zones.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "good-service-iPhone-screen-slow-zones.png"; sourceTree = "<group>"; };
+		2A1BFD4F24A5702E00703EAB /* good-service-iPhone-screen-lines.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "good-service-iPhone-screen-lines.png"; sourceTree = "<group>"; };
+		2A1BFD5024A5702F00703EAB /* good-service-iPhone-screen-train.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "good-service-iPhone-screen-train.png"; sourceTree = "<group>"; };
+		2A1BFD5124A5702F00703EAB /* good-service-iPhone-screen-train-route.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "good-service-iPhone-screen-train-route.png"; sourceTree = "<group>"; };
 		2A68559824A33CAA006A8941 /* RouteDestinationTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteDestinationTable.swift; sourceTree = "<group>"; };
 		2A68559A24A33CC0006A8941 /* RouteDestinationRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteDestinationRow.swift; sourceTree = "<group>"; };
 		2A68559C24A3B0B5006A8941 /* RouteDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteDestination.swift; sourceTree = "<group>"; };
@@ -161,9 +165,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2A0F1E4324A56B0900094ADF /* images */ = {
+			isa = PBXGroup;
+			children = (
+				2A1BFD4F24A5702E00703EAB /* good-service-iPhone-screen-lines.png */,
+				2A1BFD4E24A5702E00703EAB /* good-service-iPhone-screen-slow-zones.png */,
+				2A1BFD5124A5702F00703EAB /* good-service-iPhone-screen-train-route.png */,
+				2A1BFD5024A5702F00703EAB /* good-service-iPhone-screen-train.png */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
 		2ACC218F24A16C78005B36D0 = {
 			isa = PBXGroup;
 			children = (
+				2A0F1E4324A56B0900094ADF /* images */,
 				2AF2D2C124A54620009206F9 /* README.md */,
 				2ACC219424A16C78005B36D0 /* Shared */,
 				2ACC21EC24A1866D005B36D0 /* Preview Data */,
