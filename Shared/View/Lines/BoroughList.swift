@@ -13,6 +13,7 @@ struct BoroughList: View {
     var body: some View {
         NavigationView {
             List(content: content)
+                .listStyle(InsetGroupedListStyle())
                 .navigationTitle(Text("Boroughs"))
                 .navigationBarItems(leading: VStack{
                     Text("status for new york city subway")

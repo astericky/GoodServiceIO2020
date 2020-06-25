@@ -17,7 +17,17 @@ struct SlowZoneList: View {
                     LineRow(line: line)
                 }
             }
+            .listStyle(InsetGroupedListStyle())
             .navigationBarTitle(Text("Slow Zones"))
+            .navigationBarItems(leading: VStack{
+                Text("status for new york city subway")
+                    .font(.caption)
+            },
+            trailing: VStack {
+                Button(action: {}, label: {
+                    Image(systemName: "info.circle")
+                })
+            })
         }
     }
 }
