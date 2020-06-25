@@ -26,6 +26,7 @@ extension GoodServiceTabView {
         TabView(selection: $selection) {
             routes
             lines
+            slowZones
         }
     }
     var routes: some View {
@@ -37,7 +38,7 @@ extension GoodServiceTabView {
     }
     
     var lines: some View {
-        BoroughList(viewModel: routeInfoViewModel)
+        BoroughList(routeInfoViewModel: routeInfoViewModel)
             .tabItem {
                 Image("railway")
                 Text("Lines")

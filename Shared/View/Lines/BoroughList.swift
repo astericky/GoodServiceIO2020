@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct BoroughList: View {
-    @ObservedObject var viewModel: RouteInfoViewModel
+    @ObservedObject var routeInfoViewModel: RouteInfoViewModel
     
     var body: some View {
         NavigationView {
@@ -20,7 +20,7 @@ struct BoroughList: View {
 
 extension BoroughList {
     func content() -> some View {
-        ForEach(viewModel.boroughs, id: \.self) { borough in
+        ForEach(routeInfoViewModel.boroughs, id: \.self) { borough in
             NavigationLink(destination: BoroughDetail(borough: borough)) {
                 Text(borough.name)
             }
@@ -31,6 +31,6 @@ extension BoroughList {
 struct BoroughList_Previews: PreviewProvider {
     static var routeInfoViewModel = RouteInfoViewModel()
     static var previews: some View {
-        BoroughList(viewModel: routeInfoViewModel)
+        BoroughList(routeInfoViewModel: routeInfoViewModel)
     }
 }
