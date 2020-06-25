@@ -21,6 +21,7 @@ extension RouteList {
     private var routeList: some View {
         NavigationView {
             List(content: content)
+                .listStyle(InsetGroupedListStyle())
                 .navigationBarTitle(Text("Trains"))
                 .navigationBarItems(leading: VStack{
                     Text("status of new york city subway")
