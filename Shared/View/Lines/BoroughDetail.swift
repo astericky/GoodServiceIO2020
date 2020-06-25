@@ -13,10 +13,9 @@ struct BoroughDetail: View {
     var body: some View {
         NavigationView {
             List(borough.lines) { line in
-                Text(line.name)
-    //            NavigationLink(destination: LineDetail(viewModel: line)) {
-    //                LineRow(viewModel: line)
-    //            }
+                NavigationLink(destination: LineDetail(line: line)) {
+                    LineRow(line: line)
+                }
             }
             .navigationBarTitle(Text(borough.name))
         }
@@ -27,8 +26,12 @@ struct BoroughDetail_Previews: PreviewProvider {
     static var routes = routesInfo.routes
     static var lines: [Line] = {
         routesInfo.lines["Manhattan"]!.map { item in
-            let routesTestData = routes.filter { $0.id == item.id }
-            let routesData = routesTestData.map { Route(item: $0) }
+            var routestData = item.routes.flatMap { route in
+                return routes.filter {
+                    return $0.id == route.id
+                }
+            }
+            let routesData = routestData.map { Route(item: $0) }
             return Line(item: item, routes: routesData)
         }
     }()

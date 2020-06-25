@@ -12,15 +12,28 @@ struct RouteDestinationTable: View {
     var destination: RouteDestination
     
     var body: some View {
-        tableHeader
+        VStack {
+            tableHeader
+            routeDestinationList
+        }
     }
 }
 
 extension RouteDestinationTable {
-    var tableHeader: some View  {
-        Text(destination.name)
-            .font(.headline)
-            .padding(.top, 10)
+    var tableHeader: some View {
+        HStack {
+            Spacer()
+            Text(destination.name)
+                .font(.headline)
+                .padding(.top, 16)
+            Spacer()
+        }
+    }
+    
+    var routeDestinationList: some View {
+        Group {
+            ForEach(destination.directions, id: \.self, content: RouteDestinationRow.init(direction:))
+        }
     }
 }
 
@@ -31,5 +44,6 @@ struct RouteDestinationTable_Previews: PreviewProvider {
     static var destination = RouteDestination(name: name, directions: directions)
     static var previews: some View {
         RouteDestinationTable(destination: destination)
+            .previewLayout(.fixed(width: 375, height: 500))
     }
 }

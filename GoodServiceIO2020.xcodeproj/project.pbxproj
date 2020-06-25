@@ -47,6 +47,11 @@
 		2ACC22EE24A2D35E005B36D0 /* BoroughDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACC22ED24A2D35E005B36D0 /* BoroughDetail.swift */; };
 		2ACC22FA24A2FBFB005B36D0 /* FavoriteModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2ACC22F724A2FBFB005B36D0 /* FavoriteModel.xcdatamodeld */; };
 		2ACC22FC24A327F0005B36D0 /* RouteListSubHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACC22FB24A327F0005B36D0 /* RouteListSubHeader.swift */; };
+		2AF2D2B624A44468009206F9 /* SlowZoneList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF2D2B524A44468009206F9 /* SlowZoneList.swift */; };
+		2AF2D2B824A444E2009206F9 /* LineDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF2D2B724A444E2009206F9 /* LineDetail.swift */; };
+		2AF2D2BA24A446BE009206F9 /* HorizontalRouteList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF2D2B924A446BE009206F9 /* HorizontalRouteList.swift */; };
+		2AF2D2BC24A44784009206F9 /* LineRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF2D2BB24A44784009206F9 /* LineRow.swift */; };
+		2AF2D2BE24A4499A009206F9 /* StatusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF2D2BD24A4499A009206F9 /* StatusBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,6 +119,11 @@
 		2ACC22F824A2FBFB005B36D0 /* FavoriteRoutesModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FavoriteRoutesModel.xcdatamodel; sourceTree = "<group>"; };
 		2ACC22F924A2FBFB005B36D0 /* FavoriteModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FavoriteModel.xcdatamodel; sourceTree = "<group>"; };
 		2ACC22FB24A327F0005B36D0 /* RouteListSubHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteListSubHeader.swift; sourceTree = "<group>"; };
+		2AF2D2B524A44468009206F9 /* SlowZoneList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlowZoneList.swift; sourceTree = "<group>"; };
+		2AF2D2B724A444E2009206F9 /* LineDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineDetail.swift; sourceTree = "<group>"; };
+		2AF2D2B924A446BE009206F9 /* HorizontalRouteList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalRouteList.swift; sourceTree = "<group>"; };
+		2AF2D2BB24A44784009206F9 /* LineRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineRow.swift; sourceTree = "<group>"; };
+		2AF2D2BD24A4499A009206F9 /* StatusBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,7 +180,6 @@
 				2ACC21DC24A17B25005B36D0 /* API */,
 				2ACC21D224A16EFD005B36D0 /* utils */,
 				2ACC219524A16C78005B36D0 /* GoodServiceIO2020App.swift */,
-				2ACC219624A16C78005B36D0 /* GoodServiceTabView.swift */,
 				2ACC219724A16C79005B36D0 /* Assets.xcassets */,
 				2ACC22F724A2FBFB005B36D0 /* FavoriteModel.xcdatamodeld */,
 			);
@@ -272,6 +281,7 @@
 		2ACC220524A193C0005B36D0 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2ACC219624A16C78005B36D0 /* GoodServiceTabView.swift */,
 				2ACC220624A193FC005B36D0 /* Trains */,
 				2ACC220724A19405005B36D0 /* Lines */,
 				2ACC220824A1940F005B36D0 /* SlowZones */,
@@ -298,6 +308,10 @@
 			children = (
 				2ACC22EA24A2D274005B36D0 /* BoroughList.swift */,
 				2ACC22ED24A2D35E005B36D0 /* BoroughDetail.swift */,
+				2AF2D2BB24A44784009206F9 /* LineRow.swift */,
+				2AF2D2B724A444E2009206F9 /* LineDetail.swift */,
+				2AF2D2B924A446BE009206F9 /* HorizontalRouteList.swift */,
+				2AF2D2BD24A4499A009206F9 /* StatusBar.swift */,
 			);
 			path = Lines;
 			sourceTree = "<group>";
@@ -305,6 +319,7 @@
 		2ACC220824A1940F005B36D0 /* SlowZones */ = {
 			isa = PBXGroup;
 			children = (
+				2AF2D2B524A44468009206F9 /* SlowZoneList.swift */,
 			);
 			path = SlowZones;
 			sourceTree = "<group>";
@@ -482,13 +497,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AF2D2B624A44468009206F9 /* SlowZoneList.swift in Sources */,
 				2ACC220F24A19A27005B36D0 /* RouteRow.swift in Sources */,
 				2ACC21D424A17893005B36D0 /* Double+format.swift in Sources */,
 				2ACC21E124A17C00005B36D0 /* GoodServiceError.swift in Sources */,
 				2ACC22EB24A2D274005B36D0 /* BoroughList.swift in Sources */,
+				2AF2D2B824A444E2009206F9 /* LineDetail.swift in Sources */,
 				2ACC221324A19B30005B36D0 /* RouteNoServiceRow.swift in Sources */,
 				2ACC21D624A178E0005B36D0 /* Color+Hex.swift in Sources */,
 				2ACC21FF24A18D74005B36D0 /* LineDirection.swift in Sources */,
+				2AF2D2BA24A446BE009206F9 /* HorizontalRouteList.swift in Sources */,
 				2ACC21E324A17C00005B36D0 /* RouteMapsResponse.swift in Sources */,
 				2ACC22FA24A2FBFB005B36D0 /* FavoriteModel.xcdatamodeld in Sources */,
 				2ACC21F824A18687005B36D0 /* TestData.swift in Sources */,
@@ -496,6 +514,7 @@
 				2ACC22FC24A327F0005B36D0 /* RouteListSubHeader.swift in Sources */,
 				2ACC21DB24A17A41005B36D0 /* RouteInfoViewModel.swift in Sources */,
 				2ACC22E724A2CEAB005B36D0 /* Borough.swift in Sources */,
+				2AF2D2BE24A4499A009206F9 /* StatusBar.swift in Sources */,
 				2A68559B24A33CC0006A8941 /* RouteDestinationRow.swift in Sources */,
 				2ACC21C024A16C79005B36D0 /* GoodServiceTabView.swift in Sources */,
 				2A68559924A33CAA006A8941 /* RouteDestinationTable.swift in Sources */,
@@ -504,6 +523,7 @@
 				2ACC220224A18D74005B36D0 /* Line.swift in Sources */,
 				2ACC21BE24A16C79005B36D0 /* GoodServiceIO2020App.swift in Sources */,
 				2A68559D24A3B0B5006A8941 /* RouteDestination.swift in Sources */,
+				2AF2D2BC24A44784009206F9 /* LineRow.swift in Sources */,
 				2ACC21E224A17C00005B36D0 /* GoodServiceFetcher.swift in Sources */,
 				2ACC21E424A17C00005B36D0 /* StatusResponse.swift in Sources */,
 				2ACC21E924A17DE8005B36D0 /* Station.swift in Sources */,

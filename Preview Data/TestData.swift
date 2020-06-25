@@ -12,6 +12,15 @@ let routesInfo: InfoResponse = load("info.json")
 let statsInfo: StatusResponse = load("stats.json")
 let routeMapInfo: RouteMapsResponse = load("route-map.json")
 
+var lines: [Line] = {
+    routesInfo.lines["Manhattan"]!.map { item in
+        let routesTestData = routesInfo.routes.filter { $0.id == item.id }
+        let routesData = routesTestData.map { Route(item: $0) }
+        return Line(item: item, routes: routesData)
+    }
+}()
+
+
 func load<T: Decodable>(_ filename: String, as type: T.Type = T.self) -> T {
     let data: Data
     

@@ -14,9 +14,13 @@ struct RouteDetail: View {
     
     var body: some View {
         ScrollView {
-            header
-            status
+            VStack(spacing: 0) {
+                header
+                status
+                routeDestintations
+            }
         }
+        .id(UUID().uuidString)
         .sheet(isPresented: $showModal) {
             Text("Hello Family")
         }
@@ -38,9 +42,8 @@ extension RouteDetail {
                     .font(.caption)
                 Spacer()
             }
-            .padding()
             routeMapButton
-        }
+        }.padding(.init(top: -50, leading: 16, bottom: 16, trailing: 16))
     }
     
     var routeMapButton: some View {
@@ -80,7 +83,11 @@ extension RouteDetail {
 
 struct RouteDetail_Previews: PreviewProvider {
     static var route = Route(item: routesInfo.routes[8])
+    static var route2 = Route(item: routesInfo.routes[9])
     static var previews: some View {
-        RouteDetail(route: route)
+        Group {
+            RouteDetail(route: route)
+            RouteDetail(route: route2)
+        }
     }
 }

@@ -14,6 +14,9 @@ struct GoodServiceTabView: View {
     var body: some View {
         ZStack {
             tabView
+            if routeInfoViewModel.routes.isEmpty {
+              loading
+            }
         }
     }
 }
@@ -35,20 +38,19 @@ extension GoodServiceTabView {
     
     var lines: some View {
         BoroughList(viewModel: routeInfoViewModel)
-          .tabItem {
-            Image("railway")
-            Text("Lines")
-        }.tag(1)
+            .tabItem {
+                Image("railway")
+                Text("Lines")
+            }.tag(1)
     }
     
-    //    var slowZones: some View {
-    //        SlowZoneList(routeInfoViewModel: routeInfoViewModel)
-    //          .tabItem {
-    //            Image("problem")
-    //            Text("Slow Zones")
-    //        }.tag(2)
-    //    }
-    //
+    var slowZones: some View {
+        SlowZoneList(routeInfoViewModel: routeInfoViewModel)
+            .tabItem {
+                Image("problem")
+                Text("Slow Zones")
+            }.tag(2)
+    }
     
     var loading: some View {
         ProgressView()
