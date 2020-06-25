@@ -126,6 +126,7 @@
 		2AF2D2BB24A44784009206F9 /* LineRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineRow.swift; sourceTree = "<group>"; };
 		2AF2D2BD24A4499A009206F9 /* StatusBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBar.swift; sourceTree = "<group>"; };
 		2AF2D2BF24A510ED009206F9 /* GoodServiceNavigationBarItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodServiceNavigationBarItems.swift; sourceTree = "<group>"; };
+		2AF2D2C124A54620009206F9 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +164,7 @@
 		2ACC218F24A16C78005B36D0 = {
 			isa = PBXGroup;
 			children = (
+				2AF2D2C124A54620009206F9 /* README.md */,
 				2ACC219424A16C78005B36D0 /* Shared */,
 				2ACC21EC24A1866D005B36D0 /* Preview Data */,
 				2ACC219E24A16C79005B36D0 /* iOS */,
