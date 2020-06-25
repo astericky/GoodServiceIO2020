@@ -10,7 +10,7 @@ import SwiftUI
 struct LineDetail: View {
     var line: Line
     var body: some View {
-        VStack {
+        VStack(alignment: .leading) {
             header
             statusBar
 //            lineNorthDirectionTable

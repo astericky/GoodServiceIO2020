@@ -11,14 +11,12 @@ struct BoroughDetail: View {
     var borough: Borough
     
     var body: some View {
-        NavigationView {
-            List(borough.lines) { line in
-                NavigationLink(destination: LineDetail(line: line)) {
-                    LineRow(line: line)
-                }
+        List(borough.lines) { line in
+            NavigationLink(destination: LineDetail(line: line)) {
+                LineRow(line: line)
             }
-            .navigationBarTitle(Text(borough.name))
         }
+        .navigationBarTitle(Text(borough.name))
     }
 }
 

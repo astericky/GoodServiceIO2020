@@ -41,9 +41,10 @@ struct LineRow_Previews: PreviewProvider {
     static var lines: [Line] = {
         // loop through line array
         routesInfo.lines["Manhattan"]!.map { item in
+            // TOTO: Refactor this to use HASH for search
             // loop through line route
             var routestData = item.routes.flatMap { route in
-                // filter non matching routes
+                // filter out non matching routes
                 return routes.filter {
                     return $0.id == route.id
                 }
