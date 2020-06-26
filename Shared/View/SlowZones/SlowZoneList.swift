@@ -10,6 +10,8 @@ import SwiftUI
 struct SlowZoneList: View {
     @ObservedObject var routeInfoViewModel: RouteInfoViewModel
     
+    @State private var showAboutModal = false
+    
     var body: some View {
         NavigationView {
             List(routeInfoViewModel.slowZones, id: \.self) { line in
@@ -18,17 +20,22 @@ struct SlowZoneList: View {
                 }
             }
             .listStyle(InsetGroupedListStyle())
-            .navigationBarTitle(Text("Slow Zones"))
+            .navigationBarTitle(Text("Slow Zones"), displayMode: .large)
             .navigationBarItems(leading: VStack{
                 Text("status for new york city subway")
                     .font(.caption)
             },
             trailing: VStack {
-                Button(action: {}, label: {
+                Button(action: {
+                    self.showAboutModal.toggle()
+                }, label: {
                     Image(systemName: "info.circle")
                 })
             })
         }
+            .sheet(isPresented: $showAboutModal) {
+                AboutModal()
+            }
     }
 }
 

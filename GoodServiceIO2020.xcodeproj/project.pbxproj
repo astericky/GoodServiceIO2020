@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A1BFD5424A5B8D400703EAB /* AboutModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1BFD5324A5B8D400703EAB /* AboutModal.swift */; };
 		2A68559924A33CAA006A8941 /* RouteDestinationTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A68559824A33CAA006A8941 /* RouteDestinationTable.swift */; };
 		2A68559B24A33CC0006A8941 /* RouteDestinationRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A68559A24A33CC0006A8941 /* RouteDestinationRow.swift */; };
 		2A68559D24A3B0B5006A8941 /* RouteDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A68559C24A3B0B5006A8941 /* RouteDestination.swift */; };
@@ -77,6 +78,7 @@
 		2A1BFD4F24A5702E00703EAB /* good-service-iPhone-screen-lines.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "good-service-iPhone-screen-lines.png"; sourceTree = "<group>"; };
 		2A1BFD5024A5702F00703EAB /* good-service-iPhone-screen-train.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "good-service-iPhone-screen-train.png"; sourceTree = "<group>"; };
 		2A1BFD5124A5702F00703EAB /* good-service-iPhone-screen-train-route.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "good-service-iPhone-screen-train-route.png"; sourceTree = "<group>"; };
+		2A1BFD5324A5B8D400703EAB /* AboutModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutModal.swift; sourceTree = "<group>"; };
 		2A68559824A33CAA006A8941 /* RouteDestinationTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteDestinationTable.swift; sourceTree = "<group>"; };
 		2A68559A24A33CC0006A8941 /* RouteDestinationRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteDestinationRow.swift; sourceTree = "<group>"; };
 		2A68559C24A3B0B5006A8941 /* RouteDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteDestination.swift; sourceTree = "<group>"; };
@@ -174,6 +176,14 @@
 				2A1BFD5024A5702F00703EAB /* good-service-iPhone-screen-train.png */,
 			);
 			path = images;
+			sourceTree = "<group>";
+		};
+		2A1BFD5224A5B89E00703EAB /* Modals */ = {
+			isa = PBXGroup;
+			children = (
+				2A1BFD5324A5B8D400703EAB /* AboutModal.swift */,
+			);
+			path = Modals;
 			sourceTree = "<group>";
 		};
 		2ACC218F24A16C78005B36D0 = {
@@ -306,6 +316,7 @@
 				2ACC220624A193FC005B36D0 /* Trains */,
 				2ACC220724A19405005B36D0 /* Lines */,
 				2ACC220824A1940F005B36D0 /* SlowZones */,
+				2A1BFD5224A5B89E00703EAB /* Modals */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -541,6 +552,7 @@
 				2ACC21C024A16C79005B36D0 /* GoodServiceTabView.swift in Sources */,
 				2A68559924A33CAA006A8941 /* RouteDestinationTable.swift in Sources */,
 				2ACC21E624A17CCE005B36D0 /* InfoResponse.swift in Sources */,
+				2A1BFD5424A5B8D400703EAB /* AboutModal.swift in Sources */,
 				2ACC22EE24A2D35E005B36D0 /* BoroughDetail.swift in Sources */,
 				2ACC220224A18D74005B36D0 /* Line.swift in Sources */,
 				2ACC21BE24A16C79005B36D0 /* GoodServiceIO2020App.swift in Sources */,

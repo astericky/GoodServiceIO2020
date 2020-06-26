@@ -10,6 +10,8 @@ import SwiftUI
 struct BoroughList: View {
     @ObservedObject var routeInfoViewModel: RouteInfoViewModel
     
+    @State private var showAboutModal = false
+    
     var body: some View {
         NavigationView {
             List(content: content)
@@ -20,11 +22,16 @@ struct BoroughList: View {
                         .font(.caption)
                 },
                 trailing: VStack {
-                    Button(action: {}, label: {
+                    Button(action: {
+                        self.showAboutModal.toggle()
+                    }, label: {
                         Image(systemName: "info.circle")
                     })
                 })
         }
+            .sheet(isPresented: $showAboutModal) {
+                AboutModal()
+            }
     }
 }
 

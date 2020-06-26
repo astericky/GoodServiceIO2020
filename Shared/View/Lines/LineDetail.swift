@@ -17,6 +17,7 @@ struct LineDetail: View {
 //            lineSouthDirectionTable
             Spacer()
         }
+        .navigationTitle(line.name)
 
     }
 }
@@ -25,9 +26,9 @@ extension LineDetail {
     var header: some View {
         HStack {
             VStack(alignment: .leading) {
-                Text(line.name)
-                    .font(.title)
-                    .fontWeight(.bold)
+//                Text(line.name)
+//                    .font(.title)
+//                    .fontWeight(.bold)
                 HorizontalRouteList(routes: line.routes)
             }
             Spacer()
