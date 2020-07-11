@@ -10,56 +10,56 @@ import Foundation
 import Combine
 
 protocol GoodServiceFetchable {
-  func getInfo() -> AnyPublisher<InfoResponse, GoodServiceError>
-  func getMaps() -> AnyPublisher<RouteMapsResponse, GoodServiceError>
+    func getInfo() -> AnyPublisher<InfoResponse, GoodServiceError>
+    func getRouteMaps() -> AnyPublisher<RouteMapsResponse, GoodServiceError>
 }
 
 class GoodServiceFetcher {
-  private let session: URLSession
-  
-  init(session: URLSession = .shared) {
-    self.session = session
-  }
+    private let session: URLSession
+    
+    init(session: URLSession = .shared) {
+        self.session = session
+    }
 }
 
 extension GoodServiceFetcher: GoodServiceFetchable {
-  func getInfo() -> AnyPublisher<InfoResponse, GoodServiceError> {
-    let urlString = "https://www.goodservice.io/api/info"
-    
-    guard let url = URL(string: urlString) else {
-      let error = GoodServiceError.network(description: "Couldn't create url.")
-      return Fail(error: error).eraseToAnyPublisher()
-    }
-    return session.dataTaskPublisher(for: URLRequest(url: url))
-      .map { return $0.data }
-      .decode(type: InfoResponse.self, decoder: JSONDecoder())
-      .mapError { error in
-        print(error)
-        return .network(description: error.localizedDescription)
-    }
-    .eraseToAnyPublisher()
-  }
-  
-  //    #if DEBUG
-  //    func getLocalInfo() -> AnyPublisher<InfoResponse, GoodServiceError> {
-  //        return routesInfo
-  //    }
-  //    #endif
-  
-  func getMaps() -> AnyPublisher<RouteMapsResponse, GoodServiceError> {
-    let urlString = "https://www.goodservice.io/api/routes"
-    guard let url = URL(string: urlString) else {
-      let error = GoodServiceError.network(description: "Couldn't create url.")
-      return Fail(error: error).eraseToAnyPublisher()
+    func getInfo() -> AnyPublisher<InfoResponse, GoodServiceError> {
+        let urlString = "https://www.goodservice.io/api/info"
+        
+        guard let url = URL(string: urlString) else {
+            let error = GoodServiceError.network(description: "Couldn't create url.")
+            return Fail(error: error).eraseToAnyPublisher()
+        }
+        return session.dataTaskPublisher(for: URLRequest(url: url))
+            .map { return $0.data }
+            .decode(type: InfoResponse.self, decoder: JSONDecoder())
+            .mapError { error in
+                print(error)
+                return .network(description: error.localizedDescription)
+            }
+            .eraseToAnyPublisher()
     }
     
-    return session.dataTaskPublisher(for: URLRequest(url: url))
-      .map(\.data)
-      .decode(type: RouteMapsResponse.self, decoder: JSONDecoder())
-      .mapError { error in
-        print(error)
-        return .network(description: error.localizedDescription)
+    func getStationDetails() -> AnyPublisher<RouteMapsResponse, GoodServiceError> {
+        Bundle.main.decode(StationDetails.self, from: "station-details.json") {
+            
+        }
     }
-    .eraseToAnyPublisher()
-  }
+    
+    func getRouteMaps() -> AnyPublisher<RouteMapsResponse, GoodServiceError> {
+        let urlString = "https://www.goodservice.io/api/routes"
+        guard let url = URL(string: urlString) else {
+            let error = GoodServiceError.network(description: "Couldn't create url.")
+            return Fail(error: error).eraseToAnyPublisher()
+        }
+        
+        return session.dataTaskPublisher(for: URLRequest(url: url))
+            .map(\.data)
+            .decode(type: RouteMapsResponse.self, decoder: JSONDecoder())
+            .mapError { error in
+                print(error)
+                return .network(description: error.localizedDescription)
+            }
+            .eraseToAnyPublisher()
+    }
 }

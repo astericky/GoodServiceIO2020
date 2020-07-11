@@ -9,6 +9,12 @@ import Combine
 import SwiftUI
 
 final class RouteInfoViewModel: ObservableObject {
+    @Published var routeMaps: RouteMapsResponse = RouteMapsResponse(
+        routes: [String : RouteMapsResponse.Route](),
+        stops: [String : RouteMapsResponse.Stop]()
+    )
+    
+    
     
     @Published var routes: [Route] = []
     @Published var boroughs: [Borough] = []
@@ -16,6 +22,7 @@ final class RouteInfoViewModel: ObservableObject {
     
     private var goodServiceFetcher = GoodServiceFetcher()
     private var disposables = Set<AnyCancellable>()
+    private var routeMapCancellable: AnyCancellable?
     
     private var timestamp = ""
     var datetime: String {
@@ -48,8 +55,29 @@ final class RouteInfoViewModel: ObservableObject {
 
         self.slowZones = self.getSlowLines()
         #else
+        self.fetchRouteMap()
         self.fetchRouteInfo()
         #endif
+    }
+    
+    func fetchRouteMap() {
+        routeMapCancellable = goodServiceFetcher.getRouteMaps()
+            .receive(on: DispatchQueue.main)
+            .sink(
+                receiveCompletion: { [weak self] value in
+                    guard let self = self else { return }
+                    switch value {
+                    case .failure:
+                        self.reset()
+                    case .finished:
+                        break
+                    }
+                },
+                receiveValue: { [weak self] value in
+                    guard let self = self else { return }
+                    self.routeMaps = RouteMapsResponse(routes: value.routes, stops: value.stops)
+                })
+            
     }
     
     func fetchRouteInfo() {

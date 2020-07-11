@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		2A1BFD5424A5B8D400703EAB /* AboutModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1BFD5324A5B8D400703EAB /* AboutModal.swift */; };
+		2A1BFD5624A5C3E000703EAB /* MapModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1BFD5524A5C3E000703EAB /* MapModal.swift */; };
+		2A1BFD9C24ABD48E00703EAB /* RouteMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1BFD9B24ABD48E00703EAB /* RouteMap.swift */; };
+		2A1BFDF524B63BCC00703EAB /* Bundle+Decode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1BFDF424B63BCC00703EAB /* Bundle+Decode.swift */; };
+		2A1BFDF724B64E1100703EAB /* RouteMapsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1BFDF624B64E1100703EAB /* RouteMapsStore.swift */; };
 		2A68559924A33CAA006A8941 /* RouteDestinationTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A68559824A33CAA006A8941 /* RouteDestinationTable.swift */; };
 		2A68559B24A33CC0006A8941 /* RouteDestinationRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A68559A24A33CC0006A8941 /* RouteDestinationRow.swift */; };
 		2A68559D24A3B0B5006A8941 /* RouteDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A68559C24A3B0B5006A8941 /* RouteDestination.swift */; };
@@ -19,7 +23,7 @@
 		2ACC21C124A16C79005B36D0 /* GoodServiceTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACC219624A16C78005B36D0 /* GoodServiceTabView.swift */; };
 		2ACC21C224A16C79005B36D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2ACC219724A16C79005B36D0 /* Assets.xcassets */; };
 		2ACC21C324A16C79005B36D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2ACC219724A16C79005B36D0 /* Assets.xcassets */; };
-		2ACC21D424A17893005B36D0 /* Double+format.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACC21D324A17893005B36D0 /* Double+format.swift */; };
+		2ACC21D424A17893005B36D0 /* Double+Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACC21D324A17893005B36D0 /* Double+Format.swift */; };
 		2ACC21D624A178E0005B36D0 /* Color+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACC21D524A178E0005B36D0 /* Color+Hex.swift */; };
 		2ACC21D824A17974005B36D0 /* UIImage+RoundedCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACC21D724A17974005B36D0 /* UIImage+RoundedCorners.swift */; };
 		2ACC21DB24A17A41005B36D0 /* RouteInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACC21DA24A17A41005B36D0 /* RouteInfoViewModel.swift */; };
@@ -28,10 +32,10 @@
 		2ACC21E324A17C00005B36D0 /* RouteMapsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACC21DF24A17C00005B36D0 /* RouteMapsResponse.swift */; };
 		2ACC21E424A17C00005B36D0 /* StatusResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACC21E024A17C00005B36D0 /* StatusResponse.swift */; };
 		2ACC21E624A17CCE005B36D0 /* InfoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACC21E524A17CCE005B36D0 /* InfoResponse.swift */; };
-		2ACC21E924A17DE8005B36D0 /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACC21E824A17DE8005B36D0 /* Station.swift */; };
+		2ACC21E924A17DE8005B36D0 /* StationDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACC21E824A17DE8005B36D0 /* StationDetails.swift */; };
 		2ACC21F324A18687005B36D0 /* route-map.json in Resources */ = {isa = PBXBuildFile; fileRef = 2ACC21ED24A18687005B36D0 /* route-map.json */; };
 		2ACC21F424A18687005B36D0 /* info.json in Resources */ = {isa = PBXBuildFile; fileRef = 2ACC21EE24A18687005B36D0 /* info.json */; };
-		2ACC21F524A18687005B36D0 /* Stations.csv in Resources */ = {isa = PBXBuildFile; fileRef = 2ACC21EF24A18687005B36D0 /* Stations.csv */; };
+		2ACC21F524A18687005B36D0 /* stations.csv in Resources */ = {isa = PBXBuildFile; fileRef = 2ACC21EF24A18687005B36D0 /* stations.csv */; };
 		2ACC21F624A18687005B36D0 /* station-details.json in Resources */ = {isa = PBXBuildFile; fileRef = 2ACC21F024A18687005B36D0 /* station-details.json */; };
 		2ACC21F724A18687005B36D0 /* stats.json in Resources */ = {isa = PBXBuildFile; fileRef = 2ACC21F124A18687005B36D0 /* stats.json */; };
 		2ACC21F824A18687005B36D0 /* TestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACC21F224A18687005B36D0 /* TestData.swift */; };
@@ -79,6 +83,10 @@
 		2A1BFD5024A5702F00703EAB /* good-service-iPhone-screen-train.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "good-service-iPhone-screen-train.png"; sourceTree = "<group>"; };
 		2A1BFD5124A5702F00703EAB /* good-service-iPhone-screen-train-route.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "good-service-iPhone-screen-train-route.png"; sourceTree = "<group>"; };
 		2A1BFD5324A5B8D400703EAB /* AboutModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutModal.swift; sourceTree = "<group>"; };
+		2A1BFD5524A5C3E000703EAB /* MapModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapModal.swift; sourceTree = "<group>"; };
+		2A1BFD9B24ABD48E00703EAB /* RouteMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteMap.swift; sourceTree = "<group>"; };
+		2A1BFDF424B63BCC00703EAB /* Bundle+Decode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Decode.swift"; sourceTree = "<group>"; };
+		2A1BFDF624B64E1100703EAB /* RouteMapsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteMapsStore.swift; sourceTree = "<group>"; };
 		2A68559824A33CAA006A8941 /* RouteDestinationTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteDestinationTable.swift; sourceTree = "<group>"; };
 		2A68559A24A33CC0006A8941 /* RouteDestinationRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteDestinationRow.swift; sourceTree = "<group>"; };
 		2A68559C24A3B0B5006A8941 /* RouteDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteDestination.swift; sourceTree = "<group>"; };
@@ -96,7 +104,7 @@
 		2ACC21B724A16C79005B36D0 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2ACC21BB24A16C79005B36D0 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		2ACC21BD24A16C79005B36D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2ACC21D324A17893005B36D0 /* Double+format.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+format.swift"; sourceTree = "<group>"; };
+		2ACC21D324A17893005B36D0 /* Double+Format.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Format.swift"; sourceTree = "<group>"; };
 		2ACC21D524A178E0005B36D0 /* Color+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Hex.swift"; sourceTree = "<group>"; };
 		2ACC21D724A17974005B36D0 /* UIImage+RoundedCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+RoundedCorners.swift"; sourceTree = "<group>"; };
 		2ACC21DA24A17A41005B36D0 /* RouteInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteInfoViewModel.swift; sourceTree = "<group>"; };
@@ -105,10 +113,10 @@
 		2ACC21DF24A17C00005B36D0 /* RouteMapsResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteMapsResponse.swift; sourceTree = "<group>"; };
 		2ACC21E024A17C00005B36D0 /* StatusResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusResponse.swift; sourceTree = "<group>"; };
 		2ACC21E524A17CCE005B36D0 /* InfoResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoResponse.swift; sourceTree = "<group>"; };
-		2ACC21E824A17DE8005B36D0 /* Station.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
+		2ACC21E824A17DE8005B36D0 /* StationDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationDetails.swift; sourceTree = "<group>"; };
 		2ACC21ED24A18687005B36D0 /* route-map.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "route-map.json"; sourceTree = "<group>"; };
 		2ACC21EE24A18687005B36D0 /* info.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = info.json; sourceTree = "<group>"; };
-		2ACC21EF24A18687005B36D0 /* Stations.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Stations.csv; sourceTree = "<group>"; };
+		2ACC21EF24A18687005B36D0 /* stations.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = stations.csv; sourceTree = "<group>"; };
 		2ACC21F024A18687005B36D0 /* station-details.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "station-details.json"; sourceTree = "<group>"; };
 		2ACC21F124A18687005B36D0 /* stats.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stats.json; sourceTree = "<group>"; };
 		2ACC21F224A18687005B36D0 /* TestData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestData.swift; sourceTree = "<group>"; };
@@ -182,8 +190,18 @@
 			isa = PBXGroup;
 			children = (
 				2A1BFD5324A5B8D400703EAB /* AboutModal.swift */,
+				2A1BFD5524A5C3E000703EAB /* MapModal.swift */,
 			);
 			path = Modals;
+			sourceTree = "<group>";
+		};
+		2A1BFD9A24AAA4C200703EAB /* station-data */ = {
+			isa = PBXGroup;
+			children = (
+				2ACC21F024A18687005B36D0 /* station-details.json */,
+				2ACC21EF24A18687005B36D0 /* stations.csv */,
+			);
+			path = "station-data";
 			sourceTree = "<group>";
 		};
 		2ACC218F24A16C78005B36D0 = {
@@ -192,7 +210,7 @@
 				2A0F1E4324A56B0900094ADF /* images */,
 				2AF2D2C124A54620009206F9 /* README.md */,
 				2ACC219424A16C78005B36D0 /* Shared */,
-				2ACC21EC24A1866D005B36D0 /* Preview Data */,
+				2ACC21EC24A1866D005B36D0 /* Preview Content */,
 				2ACC219E24A16C79005B36D0 /* iOS */,
 				2ACC21A524A16C79005B36D0 /* macOS */,
 				2ACC21AF24A16C79005B36D0 /* Tests iOS */,
@@ -209,6 +227,7 @@
 				2ACC22E524A2CD55005B36D0 /* Model */,
 				2ACC21DC24A17B25005B36D0 /* API */,
 				2ACC21D224A16EFD005B36D0 /* utils */,
+				2A1BFD9A24AAA4C200703EAB /* station-data */,
 				2ACC219524A16C78005B36D0 /* GoodServiceIO2020App.swift */,
 				2ACC219724A16C79005B36D0 /* Assets.xcassets */,
 				2ACC22F724A2FBFB005B36D0 /* FavoriteModel.xcdatamodeld */,
@@ -265,9 +284,10 @@
 		2ACC21D224A16EFD005B36D0 /* utils */ = {
 			isa = PBXGroup;
 			children = (
-				2ACC21D324A17893005B36D0 /* Double+format.swift */,
+				2ACC21D324A17893005B36D0 /* Double+Format.swift */,
 				2ACC21D524A178E0005B36D0 /* Color+Hex.swift */,
 				2ACC21D724A17974005B36D0 /* UIImage+RoundedCorners.swift */,
+				2A1BFDF424B63BCC00703EAB /* Bundle+Decode.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -276,12 +296,14 @@
 			isa = PBXGroup;
 			children = (
 				2ACC21DA24A17A41005B36D0 /* RouteInfoViewModel.swift */,
+				2A1BFDF624B64E1100703EAB /* RouteMapsStore.swift */,
 				2ACC220324A18D87005B36D0 /* Route.swift */,
 				2A68559C24A3B0B5006A8941 /* RouteDestination.swift */,
 				2ACC21F924A18D74005B36D0 /* RouteDirection.swift */,
 				2ACC22E624A2CEAB005B36D0 /* Borough.swift */,
 				2ACC21FD24A18D74005B36D0 /* Line.swift */,
 				2ACC21FA24A18D74005B36D0 /* LineDirection.swift */,
+				2A1BFD9B24ABD48E00703EAB /* RouteMap.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -295,17 +317,15 @@
 			path = API;
 			sourceTree = "<group>";
 		};
-		2ACC21EC24A1866D005B36D0 /* Preview Data */ = {
+		2ACC21EC24A1866D005B36D0 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
 				2ACC21F224A18687005B36D0 /* TestData.swift */,
 				2ACC21EE24A18687005B36D0 /* info.json */,
 				2ACC21ED24A18687005B36D0 /* route-map.json */,
-				2ACC21F024A18687005B36D0 /* station-details.json */,
-				2ACC21EF24A18687005B36D0 /* Stations.csv */,
 				2ACC21F124A18687005B36D0 /* stats.json */,
 			);
-			path = "Preview Data";
+			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		2ACC220524A193C0005B36D0 /* View */ = {
@@ -362,7 +382,7 @@
 				2ACC21E524A17CCE005B36D0 /* InfoResponse.swift */,
 				2ACC21E024A17C00005B36D0 /* StatusResponse.swift */,
 				2ACC21DF24A17C00005B36D0 /* RouteMapsResponse.swift */,
-				2ACC21E824A17DE8005B36D0 /* Station.swift */,
+				2ACC21E824A17DE8005B36D0 /* StationDetails.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -496,7 +516,7 @@
 				2ACC21F424A18687005B36D0 /* info.json in Resources */,
 				2ACC21C224A16C79005B36D0 /* Assets.xcassets in Resources */,
 				2ACC21F324A18687005B36D0 /* route-map.json in Resources */,
-				2ACC21F524A18687005B36D0 /* Stations.csv in Resources */,
+				2ACC21F524A18687005B36D0 /* stations.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -531,7 +551,8 @@
 			files = (
 				2AF2D2B624A44468009206F9 /* SlowZoneList.swift in Sources */,
 				2ACC220F24A19A27005B36D0 /* RouteRow.swift in Sources */,
-				2ACC21D424A17893005B36D0 /* Double+format.swift in Sources */,
+				2ACC21D424A17893005B36D0 /* Double+Format.swift in Sources */,
+				2A1BFD5624A5C3E000703EAB /* MapModal.swift in Sources */,
 				2AF2D2C024A510ED009206F9 /* GoodServiceNavigationBarItems.swift in Sources */,
 				2ACC21E124A17C00005B36D0 /* GoodServiceError.swift in Sources */,
 				2ACC22EB24A2D274005B36D0 /* BoroughList.swift in Sources */,
@@ -539,9 +560,11 @@
 				2ACC221324A19B30005B36D0 /* RouteNoServiceRow.swift in Sources */,
 				2ACC21D624A178E0005B36D0 /* Color+Hex.swift in Sources */,
 				2ACC21FF24A18D74005B36D0 /* LineDirection.swift in Sources */,
+				2A1BFDF524B63BCC00703EAB /* Bundle+Decode.swift in Sources */,
 				2AF2D2BA24A446BE009206F9 /* HorizontalRouteList.swift in Sources */,
 				2ACC21E324A17C00005B36D0 /* RouteMapsResponse.swift in Sources */,
 				2ACC22FA24A2FBFB005B36D0 /* FavoriteModel.xcdatamodeld in Sources */,
+				2A1BFDF724B64E1100703EAB /* RouteMapsStore.swift in Sources */,
 				2ACC21F824A18687005B36D0 /* TestData.swift in Sources */,
 				2ACC221124A19B27005B36D0 /* RouteDetail.swift in Sources */,
 				2ACC22FC24A327F0005B36D0 /* RouteListSubHeader.swift in Sources */,
@@ -560,10 +583,11 @@
 				2AF2D2BC24A44784009206F9 /* LineRow.swift in Sources */,
 				2ACC21E224A17C00005B36D0 /* GoodServiceFetcher.swift in Sources */,
 				2ACC21E424A17C00005B36D0 /* StatusResponse.swift in Sources */,
-				2ACC21E924A17DE8005B36D0 /* Station.swift in Sources */,
+				2ACC21E924A17DE8005B36D0 /* StationDetails.swift in Sources */,
 				2ACC220D24A195B4005B36D0 /* RouteList.swift in Sources */,
 				2ACC220424A18D87005B36D0 /* Route.swift in Sources */,
 				2ACC21FE24A18D74005B36D0 /* RouteDirection.swift in Sources */,
+				2A1BFD9C24ABD48E00703EAB /* RouteMap.swift in Sources */,
 				2ACC21D824A17974005B36D0 /* UIImage+RoundedCorners.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -726,6 +750,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "Preview\\ Content";
 				DEVELOPMENT_TEAM = 2RQ82SNR8Q;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = iOS/Info.plist;
@@ -748,6 +773,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "Preview\\ Content";
 				DEVELOPMENT_TEAM = 2RQ82SNR8Q;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = iOS/Info.plist;

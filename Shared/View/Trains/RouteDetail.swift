@@ -10,19 +10,19 @@ import SwiftUI
 struct RouteDetail: View {
     var route: Route
 
-    @State private var showModal = false
+    @State private var showMapModal = false
     
     var body: some View {
         ScrollView {
             VStack(spacing: 0) {
                 header
                 status
-                routeDestintations
+//                routeDestintations
             }
         }
         .id(UUID().uuidString)
-        .sheet(isPresented: $showModal) {
-            Text("Hello Family")
+        .sheet(isPresented: $showMapModal) {
+            MapModal(route: self.route)
         }
     }
 }
@@ -50,7 +50,7 @@ extension RouteDetail {
         HStack(alignment: .bottom) {
           Spacer()
           Button("Route Map") {
-            self.showModal.toggle()
+            self.showMapModal.toggle()
           }
         }
         .padding(.trailing, 16)
