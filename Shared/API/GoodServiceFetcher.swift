@@ -40,10 +40,16 @@ extension GoodServiceFetcher: GoodServiceFetchable {
             .eraseToAnyPublisher()
     }
     
-    func getStationDetails() -> AnyPublisher<RouteMapsResponse, GoodServiceError> {
-        Bundle.main.decode(StationDetails.self, from: "station-details.json") {
-            
-        }
+    func getStationDetails() -> AnyPublisher<[String: Any], Error> {
+//        print(try! Bundle.main.convertToJSON(from: "station-details.json"))
+//        return Result(catching: {
+//            try Bundle.main.decode(StationDetails.self, from: "station-details.json")
+//        })
+        return Result(catching: {
+            try Bundle.main.convertToJSON(from: "station-details.json")
+        })
+        .publisher
+        .eraseToAnyPublisher()
     }
     
     func getRouteMaps() -> AnyPublisher<RouteMapsResponse, GoodServiceError> {

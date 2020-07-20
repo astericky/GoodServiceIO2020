@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import MapKit
 
 struct Route: Identifiable {
     var item: InfoResponse.Route
@@ -68,6 +69,15 @@ struct Route: Identifiable {
         let name = item.destinations.south.joined(separator: " ,")
         let directions = item.south.map { RouteDirection(item: $0) }
         return RouteDestination(name: name, directions: directions)
+    }
+    
+    var northRouteList: [[String]]? = nil
+    var southRouteList: [[String]]? = nil
+    var northCoordinates: [CLLocationCoordinate2D]? = nil
+    var southCoordinates: [CLLocationCoordinate2D]? = nil
+    
+    init(item: InfoResponse.Route) {
+        self.item = item
     }
 }
 
