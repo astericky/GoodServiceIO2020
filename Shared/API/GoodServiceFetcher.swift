@@ -40,12 +40,6 @@ extension GoodServiceFetcher: GoodServiceFetchable {
             .eraseToAnyPublisher()
     }
     
-    func getStationDetails() -> AnyPublisher<RouteMapsResponse, GoodServiceError> {
-        Bundle.main.decode(StationDetails.self, from: "station-details.json") {
-            
-        }
-    }
-    
     func getRouteMaps() -> AnyPublisher<RouteMapsResponse, GoodServiceError> {
         let urlString = "https://www.goodservice.io/api/routes"
         guard let url = URL(string: urlString) else {

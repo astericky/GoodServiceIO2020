@@ -27,6 +27,7 @@ extension GoodServiceTabView {
             routes
             lines
             slowZones
+            favorites
         }
     }
     var routes: some View {
@@ -51,6 +52,14 @@ extension GoodServiceTabView {
                 Image("problem")
                 Text("Slow Zones")
             }.tag(2)
+    }
+    
+    var favorites: some View {
+        FavoritesList(routeInfoViewModel: routeInfoViewModel)
+            .tabItem {
+                Image(systemName: "star")
+                Text("Favorites")
+            }.tag(3)
     }
     
     var loading: some View {

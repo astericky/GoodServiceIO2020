@@ -10,6 +10,9 @@ import CoreData
 
 @main
 struct GoodServiceIO2020App: App {
+    @Environment (\.scenePhase) private var scenePhase
+    @StateObject private var persistentStore = PersistentStore.shared
+    
     @StateObject private var routeInfoViewModel = RouteInfoViewModel()
     @StateObject private var routeMapStore = RouteMapsStore()
     
@@ -17,6 +20,7 @@ struct GoodServiceIO2020App: App {
         WindowGroup {
             GoodServiceTabView(routeInfoViewModel: routeInfoViewModel)
                 .environmentObject(routeMapStore)
+                .environment(\.managedObjectContext, persistentStore.context)
         }
     }
 }

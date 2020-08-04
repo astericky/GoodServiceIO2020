@@ -15,7 +15,10 @@ struct RouteNoServiceRow: View {
             ZStack(alignment: .bottom) {
                 HStack(alignment: .top) {
                     routeName
-                    routeAlternateName
+                    HStack(alignment: .center) {
+                        isFavoriteButton
+                        routeAlternateName
+                    }
                     Spacer()
                 }
                 HStack(alignment: .bottom) {
@@ -43,13 +46,17 @@ extension RouteNoServiceRow {
     
     var routeAlternateName: some View {
         Text(route.alternateName)
-            .font(.footnote)
+            .font(.caption)
     }
     
     var routeStatus: some View {
         Text(route.status)
             .font(.caption)
             .padding(.trailing, 18)
+    }
+    
+    var isFavoriteButton: some View {
+        FavoriteButton(route: route)
     }
 }
 

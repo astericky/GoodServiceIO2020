@@ -24,6 +24,7 @@ struct SlowZoneList: View {
             .navigationBarItems(leading: VStack{
                 Text("status for new york city subway")
                     .font(.caption)
+                    .textCase(.uppercase)
             },
             trailing: VStack {
                 Button(action: {

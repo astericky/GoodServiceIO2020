@@ -29,8 +29,9 @@ extension RouteList {
                 .listStyle(InsetGroupedListStyle())
                 .navigationBarTitle(Text("Trains"))
                 .navigationBarItems(leading: VStack{
-                    Text("status of new york city subway")
+                    Text("Status of New York City Subway")
                         .font(.caption)
+                        .textCase(.uppercase)
                 },
                 trailing: VStack {
                     Button(action: {

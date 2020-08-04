@@ -8,52 +8,68 @@
 import SwiftUI
 
 struct RouteRow: View {
-
+    
     let route: Route
+    
+    @Environment(\.managedObjectContext) var moc
+    @FetchRequest(
+        entity: Favorites.entity(),
+        sortDescriptors: [
+            NSSortDescriptor(keyPath: \Favorites.title, ascending: true)
+        ]
+    ) var favorites: FetchedResults<Favorites>
     
     var body: some View {
         NavigationLink(destination: RouteDetail(route: route)) {
-          VStack(alignment: .leading) {
-            ZStack(alignment: .bottom) {
-              HStack(alignment: .top) {
-                routeName
-                routeAlternateName
-                Spacer()
-              }
-              
-              HStack(alignment: .bottom) {
-                Spacer()
-                VStack(alignment: .trailing) {
-                  routeStatus
+            VStack(alignment: .leading) {
+                ZStack(alignment: .bottom) {
+                    HStack(alignment: .top) {
+                        routeName
+                        HStack(alignment: .center) {
+                            isFavoriteButton
+                            routeAlternateName
+                        }
+                        Spacer()
+                    }
+                    
+                    HStack(alignment: .bottom) {
+                        Spacer()
+                        VStack(alignment: .trailing) {
+                            routeStatus
+                        }
+                    }
                 }
-              }
             }
-          }
-          .padding()
+            .padding()
         }
     }
 }
 
 extension RouteRow {
     var routeName: some View {
-      Text(route.name)
-        .font(.callout)
-        .fontWeight(.semibold)
-        .foregroundColor(.white)
-        .frame(width: 50.0, height: 50.0)
-        .background(route.color)
-        .clipShape(Circle())
+        Text(route.name)
+            .font(.callout)
+            .fontWeight(.semibold)
+            .foregroundColor(.white)
+            .frame(width: 50.0, height: 50.0)
+            .background(route.color)
+            .clipShape(Circle())
     }
     
     var routeAlternateName: some View {
-      Text(route.alternateName)
-        .font(.footnote)
+        Text(route.alternateName)
+            .font(.caption)
     }
     
     var routeStatus: some View {
-      Text(route.status)
-        .font(.caption)
+        Text(route.status)
+            .font(.caption)
     }
+    
+    var isFavoriteButton: some View {
+        FavoriteButton(route: route)
+    }
+
 }
 
 struct RouteRow_Previews: PreviewProvider {

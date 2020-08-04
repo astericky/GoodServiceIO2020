@@ -17,7 +17,7 @@ struct RouteDetail: View {
             VStack(spacing: 0) {
                 header
                 status
-//                routeDestintations
+                routeDestintations
             }
         }
         .id(UUID().uuidString)
@@ -42,7 +42,7 @@ extension RouteDetail {
                     .font(.caption)
                 Spacer()
             }
-            routeMapButton
+//            routeMapButton
         }.padding(.init(top: -50, leading: 16, bottom: 16, trailing: 16))
     }
     
