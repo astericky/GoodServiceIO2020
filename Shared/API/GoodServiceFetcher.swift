@@ -31,7 +31,7 @@ extension GoodServiceFetcher: GoodServiceFetchable {
             return Fail(error: error).eraseToAnyPublisher()
         }
         return session.dataTaskPublisher(for: URLRequest(url: url))
-            .map { return $0.data }
+            .map(\.data)
             .decode(type: InfoResponse.self, decoder: JSONDecoder())
             .mapError { error in
                 print(error)
