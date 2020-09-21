@@ -13,11 +13,11 @@ struct RouteRow: View {
     
     @Environment(\.managedObjectContext) var moc
     @FetchRequest(
-        entity: Favorites.entity(),
+        entity: FavoriteItem.entity(),
         sortDescriptors: [
-            NSSortDescriptor(keyPath: \Favorites.title, ascending: true)
+            NSSortDescriptor(keyPath: \FavoriteItem.title, ascending: true)
         ]
-    ) var favorites: FetchedResults<Favorites>
+    ) var favorites: FetchedResults<FavoriteItem>
     
     var body: some View {
         NavigationLink(destination: RouteDetail(route: route)) {

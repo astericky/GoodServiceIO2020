@@ -13,11 +13,11 @@ struct FavoriteButton: View {
     
     @Environment(\.managedObjectContext) var moc
     @FetchRequest(
-        entity: Favorites.entity(),
+        entity: FavoriteItem.entity(),
         sortDescriptors: [
-            NSSortDescriptor(keyPath: \Favorites.title, ascending: true)
+            NSSortDescriptor(keyPath: \FavoriteItem.title, ascending: true)
         ]
-    ) var favorites: FetchedResults<Favorites>
+    ) var favorites: FetchedResults<FavoriteItem>
     
     private var isFavorite: Bool {
         favorites.contains(where: { $0.title == route.id })
@@ -45,7 +45,7 @@ struct FavoriteButton: View {
                 try? self.moc.save()
             }
         } else {
-            let newFavorite = Favorites(context: self.moc)
+            let newFavorite = FavoriteItem(context: self.moc)
             newFavorite.id = UUID()
             newFavorite.title = self.route.name
             newFavorite.subtitle = self.route.alternateName

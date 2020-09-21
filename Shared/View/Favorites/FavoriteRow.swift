@@ -16,7 +16,7 @@ struct Favorite {
 
 
 struct FavoriteRow: View {
-    var favorite: Favorites
+    var favorite: FavoriteItem
     let route: Route
     
     var body: some View {

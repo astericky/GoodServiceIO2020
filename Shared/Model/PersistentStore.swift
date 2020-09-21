@@ -8,7 +8,7 @@
 import SwiftUI
 import CoreData
 
-class PersistentStore {
+class PersistentStore: ObservableObject {
     
     var context: NSManagedObjectContext { persistentContainer.viewContext }
     
