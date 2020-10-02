@@ -19,10 +19,12 @@ final class RouteInfoViewModel: ObservableObject {
     @Published var routes: [Route] = []
     @Published var boroughs: [Borough] = []
     @Published var slowZones: [Line] = []
+    @Published var favoritesVM = FavoritesViewModel()
     
     private var goodServiceFetcher = GoodServiceFetcher()
     private var disposables = Set<AnyCancellable>()
     private var routeMapCancellable: AnyCancellable?
+    private var favoritesCancellable = Set<AnyCancellable>()
     
     private var timestamp = ""
     var datetime: String {
@@ -40,7 +42,7 @@ final class RouteInfoViewModel: ObservableObject {
     init() {
         #if DEBUG
         self.timestamp = routesInfo.timestamp
-        self.routes = routesInfo.routes.map(Route.init(item:))
+        self.routes = routesInfo.routes.map({ create(route: $0) })
         self.boroughs = routesInfo.lines.map { boroughs in
             let lines = boroughs.value.map { line -> Line in
                 let lineRoutes = line.routes.flatMap { route in
@@ -55,9 +57,19 @@ final class RouteInfoViewModel: ObservableObject {
 
         self.slowZones = self.getSlowLines()
         #else
+        self.fetchFavorites()
         self.fetchRouteMap()
         self.fetchRouteInfo()
         #endif
+        favoritesVM.objectWillChange
+            .sink { _ in
+                self.objectWillChange.send()
+            }
+            .store(in: &favoritesCancellable)
+    }
+    
+    func fetchFavorites() {
+        favoritesVM.fetchAllFavorites()
     }
     
     func fetchRouteMap() {
@@ -96,7 +108,7 @@ final class RouteInfoViewModel: ObservableObject {
                 receiveValue: { [weak self] info in
                     guard let self = self else { return }
                     self.timestamp = info.timestamp
-                    self.routes = info.routes.map(Route.init(item:))
+                    self.routes = info.routes.map({ self.create(route: $0) })
                     self.boroughs = info.lines.map { boroughs in
                         let lines = boroughs.value.map { line -> Line in
                             let lineRoutes = line.routes.flatMap { route in
@@ -112,6 +124,10 @@ final class RouteInfoViewModel: ObservableObject {
                     self.slowZones = self.getSlowLines()
                 })
             .store(in: &disposables)
+    }
+    
+    private func create(route: InfoResponse.Route) -> Route {
+        return Route(item: route)
     }
     
     private func reset() {

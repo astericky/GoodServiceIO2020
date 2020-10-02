@@ -46,9 +46,9 @@ class RouteMap: ObservableObject {
         self.name = name
     }
     
-    func getRouteNumbers() -> [StationDetails] {
-        var stations = [StationDetails]()
+//    func getRouteNumbers() -> [StationDetails] {
+//        var stations = [StationDetails]()
 //        print(Bundle.main.decode(RouteMapJSON, from: "route-map.json"))
-        return stations
-    }
+//        return stations
+//    }
 }

@@ -26,10 +26,8 @@ struct RouteNoServiceRow: View {
                     routeStatus
                 }
             }
-            
         }
         .padding()
-        
     }
 }
 

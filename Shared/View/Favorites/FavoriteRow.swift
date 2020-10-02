@@ -7,16 +7,8 @@
 
 import SwiftUI
 
-struct Favorite {
-    var id: String
-    var title: String
-    var subtitle: String
-    var color: Color
-}
-
 
 struct FavoriteRow: View {
-    var favorite: FavoriteItem
     let route: Route
     
     var body: some View {

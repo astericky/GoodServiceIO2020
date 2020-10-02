@@ -17,10 +17,8 @@
 		2A68559D24A3B0B5006A8941 /* RouteDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A68559C24A3B0B5006A8941 /* RouteDestination.swift */; };
 		2A70B7E124D4A2B2008C19FC /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A70B7E024D4A2B2008C19FC /* FavoriteButton.swift */; };
 		2A70B7E424D76C92008C19FC /* FavoriteRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A70B7E324D76C92008C19FC /* FavoriteRow.swift */; };
-		2A8010D724D08E210086433D /* Favorites.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2A8010D524D08E210086433D /* Favorites.xcdatamodeld */; };
 		2A9764E9251906AA00EC0CCD /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9764E8251906AA00EC0CCD /* Persistence.swift */; };
 		2AC9844B24CB5B14009AD9B1 /* FavoritesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC9844A24CB5B14009AD9B1 /* FavoritesList.swift */; };
-		2AC9844D24CCCDF7009AD9B1 /* PersistentStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC9844C24CCCDF7009AD9B1 /* PersistentStore.swift */; };
 		2ACC21B124A16C79005B36D0 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACC21B024A16C79005B36D0 /* Tests_iOS.swift */; };
 		2ACC21BC24A16C79005B36D0 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACC21BB24A16C79005B36D0 /* Tests_macOS.swift */; };
 		2ACC21BE24A16C79005B36D0 /* GoodServiceIO2020App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACC219524A16C78005B36D0 /* GoodServiceIO2020App.swift */; };
@@ -57,12 +55,16 @@
 		2ACC22EB24A2D274005B36D0 /* BoroughList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACC22EA24A2D274005B36D0 /* BoroughList.swift */; };
 		2ACC22EE24A2D35E005B36D0 /* BoroughDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACC22ED24A2D35E005B36D0 /* BoroughDetail.swift */; };
 		2ACC22FC24A327F0005B36D0 /* RouteListSubHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACC22FB24A327F0005B36D0 /* RouteListSubHeader.swift */; };
+		2ADE40FD25254B5300396BE6 /* Favorite+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADE40FC25254B5300396BE6 /* Favorite+CoreDataClass.swift */; };
+		2ADE410725254C1900396BE6 /* Favorite+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADE410625254C1900396BE6 /* Favorite+CoreDataProperties.swift */; };
 		2AF2D2B624A44468009206F9 /* SlowZoneList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF2D2B524A44468009206F9 /* SlowZoneList.swift */; };
 		2AF2D2B824A444E2009206F9 /* LineDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF2D2B724A444E2009206F9 /* LineDetail.swift */; };
 		2AF2D2BA24A446BE009206F9 /* HorizontalRouteList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF2D2B924A446BE009206F9 /* HorizontalRouteList.swift */; };
 		2AF2D2BC24A44784009206F9 /* LineRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF2D2BB24A44784009206F9 /* LineRow.swift */; };
 		2AF2D2BE24A4499A009206F9 /* StatusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF2D2BD24A4499A009206F9 /* StatusBar.swift */; };
 		2AF2D2C024A510ED009206F9 /* GoodServiceNavigationBarItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF2D2BF24A510ED009206F9 /* GoodServiceNavigationBarItems.swift */; };
+		2AFC88392519285300E6AC5C /* Favorites.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2A8010D524D08E210086433D /* Favorites.xcdatamodeld */; };
+		2AFC884225195FD300E6AC5C /* FavoritesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFC884125195FD300E6AC5C /* FavoritesViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,7 +102,6 @@
 		2A8010D624D08E210086433D /* Favorites.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Favorites.xcdatamodel; sourceTree = "<group>"; };
 		2A9764E8251906AA00EC0CCD /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		2AC9844A24CB5B14009AD9B1 /* FavoritesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesList.swift; sourceTree = "<group>"; };
-		2AC9844C24CCCDF7009AD9B1 /* PersistentStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentStore.swift; sourceTree = "<group>"; };
 		2ACC219524A16C78005B36D0 /* GoodServiceIO2020App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodServiceIO2020App.swift; sourceTree = "<group>"; };
 		2ACC219624A16C78005B36D0 /* GoodServiceTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodServiceTabView.swift; sourceTree = "<group>"; };
 		2ACC219724A16C79005B36D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -143,6 +144,8 @@
 		2ACC22EA24A2D274005B36D0 /* BoroughList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoroughList.swift; sourceTree = "<group>"; };
 		2ACC22ED24A2D35E005B36D0 /* BoroughDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoroughDetail.swift; sourceTree = "<group>"; };
 		2ACC22FB24A327F0005B36D0 /* RouteListSubHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteListSubHeader.swift; sourceTree = "<group>"; };
+		2ADE40FC25254B5300396BE6 /* Favorite+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Favorite+CoreDataClass.swift"; sourceTree = "<group>"; };
+		2ADE410625254C1900396BE6 /* Favorite+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Favorite+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		2AF2D2B524A44468009206F9 /* SlowZoneList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlowZoneList.swift; sourceTree = "<group>"; };
 		2AF2D2B724A444E2009206F9 /* LineDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineDetail.swift; sourceTree = "<group>"; };
 		2AF2D2B924A446BE009206F9 /* HorizontalRouteList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalRouteList.swift; sourceTree = "<group>"; };
@@ -150,6 +153,7 @@
 		2AF2D2BD24A4499A009206F9 /* StatusBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBar.swift; sourceTree = "<group>"; };
 		2AF2D2BF24A510ED009206F9 /* GoodServiceNavigationBarItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodServiceNavigationBarItems.swift; sourceTree = "<group>"; };
 		2AF2D2C124A54620009206F9 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		2AFC884125195FD300E6AC5C /* FavoritesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -329,6 +333,7 @@
 				2ACC21FD24A18D74005B36D0 /* Line.swift */,
 				2ACC21FA24A18D74005B36D0 /* LineDirection.swift */,
 				2A1BFD9B24ABD48E00703EAB /* RouteMap.swift */,
+				2AFC884125195FD300E6AC5C /* FavoritesViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -410,9 +415,10 @@
 				2ACC21E024A17C00005B36D0 /* StatusResponse.swift */,
 				2ACC21DF24A17C00005B36D0 /* RouteMapsResponse.swift */,
 				2ACC21E824A17DE8005B36D0 /* StationDetails.swift */,
-				2AC9844C24CCCDF7009AD9B1 /* PersistentStore.swift */,
-				2A8010D524D08E210086433D /* Favorites.xcdatamodeld */,
 				2A9764E8251906AA00EC0CCD /* Persistence.swift */,
+				2A8010D524D08E210086433D /* Favorites.xcdatamodeld */,
+				2ADE40FC25254B5300396BE6 /* Favorite+CoreDataClass.swift */,
+				2ADE410625254C1900396BE6 /* Favorite+CoreDataProperties.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -579,12 +585,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AFC88392519285300E6AC5C /* Favorites.xcdatamodeld in Sources */,
 				2A70B7E424D76C92008C19FC /* FavoriteRow.swift in Sources */,
 				2AF2D2B624A44468009206F9 /* SlowZoneList.swift in Sources */,
 				2ACC220F24A19A27005B36D0 /* RouteRow.swift in Sources */,
 				2A70B7E124D4A2B2008C19FC /* FavoriteButton.swift in Sources */,
 				2ACC21D424A17893005B36D0 /* Double+Format.swift in Sources */,
-				2A8010D724D08E210086433D /* Favorites.xcdatamodeld in Sources */,
 				2A1BFD5624A5C3E000703EAB /* MapModal.swift in Sources */,
 				2AF2D2C024A510ED009206F9 /* GoodServiceNavigationBarItems.swift in Sources */,
 				2ACC21E124A17C00005B36D0 /* GoodServiceError.swift in Sources */,
@@ -599,6 +605,7 @@
 				2ACC21E324A17C00005B36D0 /* RouteMapsResponse.swift in Sources */,
 				2A1BFDF724B64E1100703EAB /* RouteMapsStore.swift in Sources */,
 				2ACC21F824A18687005B36D0 /* TestData.swift in Sources */,
+				2AFC884225195FD300E6AC5C /* FavoritesViewModel.swift in Sources */,
 				2ACC221124A19B27005B36D0 /* RouteDetail.swift in Sources */,
 				2ACC22FC24A327F0005B36D0 /* RouteListSubHeader.swift in Sources */,
 				2ACC21DB24A17A41005B36D0 /* RouteInfoViewModel.swift in Sources */,
@@ -608,12 +615,13 @@
 				2ACC21C024A16C79005B36D0 /* GoodServiceTabView.swift in Sources */,
 				2A68559924A33CAA006A8941 /* RouteDestinationTable.swift in Sources */,
 				2ACC21E624A17CCE005B36D0 /* InfoResponse.swift in Sources */,
-				2AC9844D24CCCDF7009AD9B1 /* PersistentStore.swift in Sources */,
 				2A1BFD5424A5B8D400703EAB /* AboutModal.swift in Sources */,
 				2ACC22EE24A2D35E005B36D0 /* BoroughDetail.swift in Sources */,
 				2ACC220224A18D74005B36D0 /* Line.swift in Sources */,
+				2ADE40FD25254B5300396BE6 /* Favorite+CoreDataClass.swift in Sources */,
 				2ACC21BE24A16C79005B36D0 /* GoodServiceIO2020App.swift in Sources */,
 				2A68559D24A3B0B5006A8941 /* RouteDestination.swift in Sources */,
+				2ADE410725254C1900396BE6 /* Favorite+CoreDataProperties.swift in Sources */,
 				2AF2D2BC24A44784009206F9 /* LineRow.swift in Sources */,
 				2ACC21E224A17C00005B36D0 /* GoodServiceFetcher.swift in Sources */,
 				2AC9844B24CB5B14009AD9B1 /* FavoritesList.swift in Sources */,

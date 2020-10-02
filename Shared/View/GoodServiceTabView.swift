@@ -31,7 +31,7 @@ extension GoodServiceTabView {
         }
     }
     var routes: some View {
-        RouteList(routeInfoViewModel: routeInfoViewModel)
+        RouteList(routeInfoVM: routeInfoViewModel)
             .tabItem {
                 Image("subway")
                 Text("Trains")
@@ -55,7 +55,7 @@ extension GoodServiceTabView {
     }
     
     var favorites: some View {
-        FavoritesList(routeInfoViewModel: routeInfoViewModel)
+        FavoritesList(routeInfoVM: routeInfoViewModel)
             .tabItem {
                 Image(systemName: "star")
                 Text("Favorites")

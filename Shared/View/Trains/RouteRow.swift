@@ -10,15 +10,7 @@ import SwiftUI
 struct RouteRow: View {
     
     let route: Route
-    
-    @Environment(\.managedObjectContext) var moc
-    @FetchRequest(
-        entity: FavoriteItem.entity(),
-        sortDescriptors: [
-            NSSortDescriptor(keyPath: \FavoriteItem.title, ascending: true)
-        ]
-    ) var favorites: FetchedResults<FavoriteItem>
-    
+        
     var body: some View {
         NavigationLink(destination: RouteDetail(route: route)) {
             VStack(alignment: .leading) {
@@ -75,6 +67,7 @@ extension RouteRow {
 struct RouteRow_Previews: PreviewProvider {
     static var route = Route(item: routesInfo.routes[0])
     static var route7x = Route(item: routesInfo.routes[8])
+    static var favoritesVM = FavoritesViewModel()
     static var previews: some View {
         Group {
             RouteRow(route: route)

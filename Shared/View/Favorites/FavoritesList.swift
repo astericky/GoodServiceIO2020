@@ -9,14 +9,12 @@ import SwiftUI
 
 struct FavoritesList: View {
     
-    @ObservedObject var routeInfoViewModel: RouteInfoViewModel
-    
-    @FetchRequest(
-      entity: FavoriteItem.entity(),
-      sortDescriptors: [
-        NSSortDescriptor(keyPath: \FavoriteItem.title, ascending: true)
-      ]
-    ) var favorites: FetchedResults<FavoriteItem>
+    @ObservedObject var routeInfoVM: RouteInfoViewModel
+    let fetchRequest = Favorite.fetchAllFavorites()
+
+    var favorites: FetchedResults<Favorite> {
+        fetchRequest.wrappedValue
+    }
 
     var body: some View {
         VStack {
@@ -32,14 +30,16 @@ struct FavoritesList: View {
 extension FavoritesList {
     private func content() -> some View {
         Group {
-            ForEach(favorites) { favorite in
-                let route = routeInfoViewModel.routes.filter { $0.name == favorite.title }[0]
-                FavoriteRow(favorite: favorite, route: route)
+            ForEach(favorites, id: \.self) { favorite -> AnyView in
+                let route = routeInfoVM.routes.filter {
+                    $0.name == favorite.title && ($0.alternateName) == favorite.subtitle
+                }[0]
+                return self.selectView(for: route)
             }
         }
     }
     
-    private func selectView(for route: Route) -> some View {
+    private func selectView(for route: Route) -> AnyView {
         if route.status == "No Service"
             || route.status == "Not Scheduled" {
             return AnyView(RouteNoServiceRow(route: route))

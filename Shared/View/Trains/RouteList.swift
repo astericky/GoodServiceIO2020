@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct RouteList: View {
-    @ObservedObject var routeInfoViewModel: RouteInfoViewModel
+    @ObservedObject var routeInfoVM: RouteInfoViewModel
     
     @State private var showAboutModal = false
     
@@ -44,19 +44,19 @@ extension RouteList {
     }
     
     private var subheader: some View {
-        RouteListSubHeader(routeInfoViewModel: routeInfoViewModel)
+        RouteListSubHeader(routeInfoViewModel: routeInfoVM)
     }
     
     private func content() -> some View {
         Group {
             subheader
-            ForEach(routeInfoViewModel.routes, id: \.self) { route in
-                self.selectView(for: route)
+            ForEach(routeInfoVM.routes, id: \.self) { (route) -> AnyView in
+                return self.selectView(for: route)
             }
         }
     }
     
-    private func selectView(for route: Route) -> some View {
+    private func selectView(for route: Route) -> AnyView {
         if route.status == "No Service"
             || route.status == "Not Scheduled" {
             return AnyView(RouteNoServiceRow(route: route))
@@ -70,8 +70,8 @@ extension RouteList {
 }
 
 struct RouteList_Previews: PreviewProvider {
-    static var routeInfoViewModel = RouteInfoViewModel()
+    static var routeInfoVM = RouteInfoViewModel()
     static var previews: some View {
-        RouteList(routeInfoViewModel: routeInfoViewModel)
+        RouteList(routeInfoVM: routeInfoVM)
     }
 }
