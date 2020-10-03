@@ -31,6 +31,10 @@ struct LineDirectionViewModel {
     var delay: Int {
         direction.delay ?? 0
     }
+    
+    var routes: [InfoResponse.Line.Route] {
+        direction.routes
+    }
 }
 
 // TODO: Need to conform to Hashable but this needs to be updated somehow

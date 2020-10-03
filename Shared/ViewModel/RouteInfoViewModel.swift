@@ -13,19 +13,13 @@ final class RouteInfoViewModel: ObservableObject {
         routes: [String : RouteMapsResponse.Route](),
         stops: [String : RouteMapsResponse.Stop]()
     )
-    
-    
-    
     @Published var routes: [Route] = []
     @Published var boroughs: [Borough] = []
     @Published var slowZones: [Line] = []
-//    @Published var favoritesVM = FavoritesViewModel()
-    
+
     private var goodServiceFetcher = GoodServiceFetcher()
     private var disposables = Set<AnyCancellable>()
     private var routeMapCancellable: AnyCancellable?
-//    private var favoritesCancellable = Set<AnyCancellable>()
-    
     private var timestamp = ""
     var datetime: String {
         let dateFormatter = DateFormatter()
@@ -61,16 +55,8 @@ final class RouteInfoViewModel: ObservableObject {
         self.fetchRouteMap()
         self.fetchRouteInfo()
         #endif
-//        favoritesVM.objectWillChange
-//            .sink { _ in
-//                self.objectWillChange.send()
-//            }
-//            .store(in: &favoritesCancellable)
     }
     
-//    func fetchFavorites() {
-//        favoritesVM.fetchAllFavorites()
-//    }
     
     func fetchRouteMap() {
         routeMapCancellable = goodServiceFetcher.getRouteMaps()

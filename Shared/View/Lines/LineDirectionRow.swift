@@ -20,7 +20,7 @@ struct LineDirectionRow: View {
                     ColumnTitle("Actual Max Wait")
                     ColumnTitle("Traffic Conditions")
                     
-                    ColumnTitle("\(direction.name)")
+                    serviceData
                     ColumnData("\(direction.maxScheduledWait) min")
                     ColumnData("\(direction.maxActualWait) min")
                     ColumnData("\(direction.trafficCondition.convertDecimalToPercentString())")
@@ -28,6 +28,31 @@ struct LineDirectionRow: View {
             }
         }
             .background(Color(red: 0.9333, green: 0.9333, blue: 0.9333))
+    }
+}
+
+extension LineDirectionRow {
+    // TODO: Refactor so this uses a default route
+    var serviceData: some View {
+        VStack {
+            if !direction.name.isEmpty {
+                Text(direction.name)
+                    .font(.system(size: 12))
+                    .fontWeight(.bold)
+                    .padding(.bottom, 2)
+            
+                HStack {
+                    ForEach(direction.routes, id: \.self) { route in
+                        Text(route.name)
+                            .foregroundColor(.white)
+                            .frame(width: 25, height:25)
+                            .background(Color.createColor(from: route.color))
+                            .clipShape(Circle())
+                    }
+                }
+            }
+        }
+        .padding(.bottom, 8)
     }
 }
 
