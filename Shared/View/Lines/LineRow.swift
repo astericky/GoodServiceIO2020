@@ -9,7 +9,9 @@
 import SwiftUI
 
 struct LineRow: View {
+
     var line: Line
+    
     var body: some View {
         VStack {
             HStack {

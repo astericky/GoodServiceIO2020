@@ -18,6 +18,8 @@
 		2A70B7E124D4A2B2008C19FC /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A70B7E024D4A2B2008C19FC /* FavoriteButton.swift */; };
 		2A70B7E424D76C92008C19FC /* FavoriteRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A70B7E324D76C92008C19FC /* FavoriteRow.swift */; };
 		2A9764E9251906AA00EC0CCD /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9764E8251906AA00EC0CCD /* Persistence.swift */; };
+		2AC08E852527A5A4001A7E08 /* LineDirectionTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC08E842527A5A4001A7E08 /* LineDirectionTable.swift */; };
+		2AC08E8F2527A8C0001A7E08 /* LineDirectionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC08E8E2527A8C0001A7E08 /* LineDirectionRow.swift */; };
 		2AC9844B24CB5B14009AD9B1 /* FavoritesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC9844A24CB5B14009AD9B1 /* FavoritesList.swift */; };
 		2ACC21B124A16C79005B36D0 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACC21B024A16C79005B36D0 /* Tests_iOS.swift */; };
 		2ACC21BC24A16C79005B36D0 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACC21BB24A16C79005B36D0 /* Tests_macOS.swift */; };
@@ -44,7 +46,7 @@
 		2ACC21F724A18687005B36D0 /* stats.json in Resources */ = {isa = PBXBuildFile; fileRef = 2ACC21F124A18687005B36D0 /* stats.json */; };
 		2ACC21F824A18687005B36D0 /* TestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACC21F224A18687005B36D0 /* TestData.swift */; };
 		2ACC21FE24A18D74005B36D0 /* RouteDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACC21F924A18D74005B36D0 /* RouteDirection.swift */; };
-		2ACC21FF24A18D74005B36D0 /* LineDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACC21FA24A18D74005B36D0 /* LineDirection.swift */; };
+		2ACC21FF24A18D74005B36D0 /* LineDirectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACC21FA24A18D74005B36D0 /* LineDirectionViewModel.swift */; };
 		2ACC220224A18D74005B36D0 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACC21FD24A18D74005B36D0 /* Line.swift */; };
 		2ACC220424A18D87005B36D0 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACC220324A18D87005B36D0 /* Route.swift */; };
 		2ACC220D24A195B4005B36D0 /* RouteList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACC220C24A195B4005B36D0 /* RouteList.swift */; };
@@ -101,6 +103,8 @@
 		2A70B7E324D76C92008C19FC /* FavoriteRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteRow.swift; sourceTree = "<group>"; };
 		2A8010D624D08E210086433D /* Favorites.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Favorites.xcdatamodel; sourceTree = "<group>"; };
 		2A9764E8251906AA00EC0CCD /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		2AC08E842527A5A4001A7E08 /* LineDirectionTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineDirectionTable.swift; sourceTree = "<group>"; };
+		2AC08E8E2527A8C0001A7E08 /* LineDirectionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineDirectionRow.swift; sourceTree = "<group>"; };
 		2AC9844A24CB5B14009AD9B1 /* FavoritesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesList.swift; sourceTree = "<group>"; };
 		2ACC219524A16C78005B36D0 /* GoodServiceIO2020App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodServiceIO2020App.swift; sourceTree = "<group>"; };
 		2ACC219624A16C78005B36D0 /* GoodServiceTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodServiceTabView.swift; sourceTree = "<group>"; };
@@ -133,7 +137,7 @@
 		2ACC21F124A18687005B36D0 /* stats.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stats.json; sourceTree = "<group>"; };
 		2ACC21F224A18687005B36D0 /* TestData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestData.swift; sourceTree = "<group>"; };
 		2ACC21F924A18D74005B36D0 /* RouteDirection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteDirection.swift; sourceTree = "<group>"; };
-		2ACC21FA24A18D74005B36D0 /* LineDirection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineDirection.swift; sourceTree = "<group>"; };
+		2ACC21FA24A18D74005B36D0 /* LineDirectionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineDirectionViewModel.swift; sourceTree = "<group>"; };
 		2ACC21FD24A18D74005B36D0 /* Line.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
 		2ACC220324A18D87005B36D0 /* Route.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		2ACC220C24A195B4005B36D0 /* RouteList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteList.swift; sourceTree = "<group>"; };
@@ -221,6 +225,8 @@
 			isa = PBXGroup;
 			children = (
 				2A70B7E024D4A2B2008C19FC /* FavoriteButton.swift */,
+				2AF2D2B924A446BE009206F9 /* HorizontalRouteList.swift */,
+				2AF2D2BD24A4499A009206F9 /* StatusBar.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -331,7 +337,7 @@
 				2ACC21F924A18D74005B36D0 /* RouteDirection.swift */,
 				2ACC22E624A2CEAB005B36D0 /* Borough.swift */,
 				2ACC21FD24A18D74005B36D0 /* Line.swift */,
-				2ACC21FA24A18D74005B36D0 /* LineDirection.swift */,
+				2ACC21FA24A18D74005B36D0 /* LineDirectionViewModel.swift */,
 				2A1BFD9B24ABD48E00703EAB /* RouteMap.swift */,
 				2AFC884125195FD300E6AC5C /* FavoritesViewModel.swift */,
 			);
@@ -394,8 +400,8 @@
 				2ACC22ED24A2D35E005B36D0 /* BoroughDetail.swift */,
 				2AF2D2BB24A44784009206F9 /* LineRow.swift */,
 				2AF2D2B724A444E2009206F9 /* LineDetail.swift */,
-				2AF2D2B924A446BE009206F9 /* HorizontalRouteList.swift */,
-				2AF2D2BD24A4499A009206F9 /* StatusBar.swift */,
+				2AC08E842527A5A4001A7E08 /* LineDirectionTable.swift */,
+				2AC08E8E2527A8C0001A7E08 /* LineDirectionRow.swift */,
 			);
 			path = Lines;
 			sourceTree = "<group>";
@@ -589,6 +595,7 @@
 				2A70B7E424D76C92008C19FC /* FavoriteRow.swift in Sources */,
 				2AF2D2B624A44468009206F9 /* SlowZoneList.swift in Sources */,
 				2ACC220F24A19A27005B36D0 /* RouteRow.swift in Sources */,
+				2AC08E852527A5A4001A7E08 /* LineDirectionTable.swift in Sources */,
 				2A70B7E124D4A2B2008C19FC /* FavoriteButton.swift in Sources */,
 				2ACC21D424A17893005B36D0 /* Double+Format.swift in Sources */,
 				2A1BFD5624A5C3E000703EAB /* MapModal.swift in Sources */,
@@ -599,7 +606,7 @@
 				2AF2D2B824A444E2009206F9 /* LineDetail.swift in Sources */,
 				2ACC221324A19B30005B36D0 /* RouteNoServiceRow.swift in Sources */,
 				2ACC21D624A178E0005B36D0 /* Color+Hex.swift in Sources */,
-				2ACC21FF24A18D74005B36D0 /* LineDirection.swift in Sources */,
+				2ACC21FF24A18D74005B36D0 /* LineDirectionViewModel.swift in Sources */,
 				2A1BFDF524B63BCC00703EAB /* Bundle+Decode.swift in Sources */,
 				2AF2D2BA24A446BE009206F9 /* HorizontalRouteList.swift in Sources */,
 				2ACC21E324A17C00005B36D0 /* RouteMapsResponse.swift in Sources */,
@@ -623,6 +630,7 @@
 				2A68559D24A3B0B5006A8941 /* RouteDestination.swift in Sources */,
 				2ADE410725254C1900396BE6 /* Favorite+CoreDataProperties.swift in Sources */,
 				2AF2D2BC24A44784009206F9 /* LineRow.swift in Sources */,
+				2AC08E8F2527A8C0001A7E08 /* LineDirectionRow.swift in Sources */,
 				2ACC21E224A17C00005B36D0 /* GoodServiceFetcher.swift in Sources */,
 				2AC9844B24CB5B14009AD9B1 /* FavoritesList.swift in Sources */,
 				2ACC21E424A17C00005B36D0 /* StatusResponse.swift in Sources */,

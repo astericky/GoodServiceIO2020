@@ -8,30 +8,34 @@
 
 import Foundation
 
-struct LineDirection {
+struct LineDirectionViewModel {
     
-    var item: InfoResponse.Line.LineDirection
+    var direction: InfoResponse.Line.LineDirection
+    
+    var name: String {
+        direction.name ?? ""
+    }
     
     var maxActualWait: Int {
-        item.maxActualWait ?? 0
+        direction.maxActualWait ?? 0
     }
     
     var maxScheduledWait: Int {
-        item.maxScheduledWait ?? 0
+        direction.maxScheduledWait ?? 0
     }
     
     var trafficCondition: Double {
-        item.trafficCondition ?? 0
+        direction.trafficCondition ?? 0
     }
     
     var delay: Int {
-        item.delay ?? 0
+        direction.delay ?? 0
     }
 }
 
 // TODO: Need to conform to Hashable but this needs to be updated somehow
-extension LineDirection: Hashable {
-    static func == (lhs: LineDirection, rhs: LineDirection) -> Bool {
+extension LineDirectionViewModel: Hashable {
+    static func == (lhs: LineDirectionViewModel, rhs: LineDirectionViewModel) -> Bool {
         return lhs.delay == rhs.delay
             && lhs.maxActualWait == rhs.maxActualWait
             && lhs.maxScheduledWait == rhs.maxScheduledWait

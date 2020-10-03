@@ -20,6 +20,10 @@ struct Line: Identifiable {
         return item.name
     }
     
+    var destinations: InfoResponse.Line.Destination {
+        item.destinations
+    }
+    
     var north: [InfoResponse.Line.LineDirection] {
         return item.north
     }

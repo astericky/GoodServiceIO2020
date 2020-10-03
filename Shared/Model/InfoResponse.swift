@@ -65,6 +65,7 @@ struct InfoResponse: Codable {
         let status: String
         let maxTravelTime: Double
         let routes: [LineRoute]
+        let destinations: Line.Destination
         let north: [Line.LineDirection]
         let south: [Line.LineDirection]
         
@@ -74,21 +75,34 @@ struct InfoResponse: Codable {
             case status
             case maxTravelTime = "max_travel_time"
             case routes
+            case destinations
             case north
             case south
         }
         
         struct LineDirection: Codable {
+            let name: String?
             let maxActualWait: Int?
             let maxScheduledWait: Int?
             let trafficCondition: Double?
             let delay: Int?
             
             enum CodingKeys: String, CodingKey {
+                case name
                 case maxActualWait = "max_actual_headway"
                 case maxScheduledWait =  "max_scheduled_headway"
                 case trafficCondition = "travel_time"
                 case delay
+            }
+        }
+        
+        struct Destination: Codable {
+            let north: [String]
+            let south: [String]
+            
+            enum codingKeys: String, CodingKey {
+                case north
+                case south
             }
         }
     }

@@ -32,7 +32,9 @@ extension RouteDestinationTable {
     
     var routeDestinationList: some View {
         Group {
-            ForEach(destination.directions, id: \.self, content: RouteDestinationRow.init(direction:))
+            ForEach(destination.directions,
+                    id: \.self,
+                    content: RouteDestinationRow.init(direction:))
         }
     }
 }
