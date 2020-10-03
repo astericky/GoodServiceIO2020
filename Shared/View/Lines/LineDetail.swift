@@ -12,12 +12,14 @@ struct LineDetail: View {
     var line: Line
     
     var body: some View {
-        VStack(alignment: .leading) {
-            header
-            statusBar
-            lineNorthDirectionTable
-            lineSouthDirectionTable
-            Spacer()
+        ScrollView {
+            VStack(alignment: .leading) {
+                header
+                statusBar
+                lineNorthDirectionTable
+                lineSouthDirectionTable
+                Spacer()
+            }
         }
         .navigationTitle(line.name)
         
