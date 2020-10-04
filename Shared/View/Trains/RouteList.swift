@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct RouteList: View {
+
     @ObservedObject var routeInfoVM: RouteInfoViewModel
-    
     @State private var showAboutModal = false
     
     var body: some View {

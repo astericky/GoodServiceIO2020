@@ -15,6 +15,8 @@ struct FavoritesList: View {
     var favorites: FetchedResults<Favorite> {
         fetchRequest.wrappedValue
     }
+    
+    @State private var showAboutModal = false
 
     var body: some View {
         VStack {
@@ -22,8 +24,23 @@ struct FavoritesList: View {
                 List(content: content)
                     .listStyle(InsetGroupedListStyle())
                     .navigationBarTitle(Text("Favorites"))
+                    .navigationBarItems(leading: VStack{
+                        Text("Status of New York City Subway")
+                            .font(.caption)
+                            .textCase(.uppercase)
+                    },
+                    trailing: VStack {
+                        Button(action: {
+                            self.showAboutModal.toggle()
+                        }, label: {
+                            Image(systemName: "info.circle")
+                        })
+                    })
             }
         }
+            .sheet(isPresented: $showAboutModal) {
+                AboutModal()
+            }
     }
 }
 

@@ -859,7 +859,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.16;
-				PRODUCT_BUNDLE_IDENTIFIER = com.gayngler.GoodServiceIO2020;
+				PRODUCT_BUNDLE_IDENTIFIER = com.swiftysanders.GoodServiceIO2020;
 				PRODUCT_NAME = GoodServiceIO2020;
 				SDKROOT = macosx;
 				SWIFT_VERSION = 5.0;
@@ -883,7 +883,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.16;
-				PRODUCT_BUNDLE_IDENTIFIER = com.gayngler.GoodServiceIO2020;
+				PRODUCT_BUNDLE_IDENTIFIER = com.swiftysanders.GoodServiceIO2020;
 				PRODUCT_NAME = GoodServiceIO2020;
 				SDKROOT = macosx;
 				SWIFT_VERSION = 5.0;

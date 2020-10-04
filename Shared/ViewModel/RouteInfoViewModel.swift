@@ -34,27 +34,26 @@ final class RouteInfoViewModel: ObservableObject {
     
     
     init() {
-        #if DEBUG
-        self.timestamp = routesInfo.timestamp
-        self.routes = routesInfo.routes.map({ create(route: $0) })
-        self.boroughs = routesInfo.lines.map { boroughs in
-            let lines = boroughs.value.map { line -> Line in
-                let lineRoutes = line.routes.flatMap { route in
-                    return self.routes.filter {
-                        return $0.id == route.id
-                    }
-                }
-                return Line(item: line, routes: lineRoutes)
-            }
-            return Borough.init(name: boroughs.key, lines: lines)
-        }
-
-        self.slowZones = self.getSlowLines()
-        #else
-        self.fetchFavorites()
+//        #if DEBUG
+//        self.timestamp = routesInfo.timestamp
+//        self.routes = routesInfo.routes.map({ create(route: $0) })
+//        self.boroughs = routesInfo.lines.map { boroughs in
+//            let lines = boroughs.value.map { line -> Line in
+//                let lineRoutes = line.routes.flatMap { route in
+//                    return self.routes.filter {
+//                        return $0.id == route.id
+//                    }
+//                }
+//                return Line(item: line, routes: lineRoutes)
+//            }
+//            return Borough.init(name: boroughs.key, lines: lines)
+//        }
+//
+//        self.slowZones = self.getSlowLines()
+//        #else
         self.fetchRouteMap()
         self.fetchRouteInfo()
-        #endif
+//        #endif
     }
     
     
