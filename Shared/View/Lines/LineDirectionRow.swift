@@ -35,20 +35,18 @@ extension LineDirectionRow {
     // TODO: Refactor so this uses a default route
     var serviceData: some View {
         VStack {
-            if !direction.name.isEmpty {
-                Text(direction.name)
-                    .font(.system(size: 12))
-                    .fontWeight(.bold)
-                    .padding(.bottom, 2)
+            Text(direction.name.isEmpty ? "Local" : direction.name)
+                .font(.system(size: 12))
+                .fontWeight(.bold)
+                .padding(.bottom, 2)
             
-                HStack {
-                    ForEach(direction.routes, id: \.self) { route in
-                        Text(route.name)
-                            .foregroundColor(.white)
-                            .frame(width: 25, height:25)
-                            .background(Color.createColor(from: route.color))
-                            .clipShape(Circle())
-                    }
+            HStack {
+                ForEach(direction.routes, id: \.self) { route in
+                    Text(route.name)
+                        .foregroundColor(.white)
+                        .frame(width: 25, height:25)
+                        .background(Color.createColor(from: route.color))
+                        .clipShape(Circle())
                 }
             }
         }
