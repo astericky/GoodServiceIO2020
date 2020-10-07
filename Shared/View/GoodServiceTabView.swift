@@ -33,6 +33,7 @@ extension GoodServiceTabView {
     var routes: some View {
         RouteList(routeInfoVM: routeInfoViewModel)
             .tabItem {
+//                Image(systemName: "tram.fill")
                 Image("subway")
                 Text("Trains")
             }.tag(0)
@@ -49,6 +50,7 @@ extension GoodServiceTabView {
     var slowZones: some View {
         SlowZoneList(routeInfoViewModel: routeInfoViewModel)
             .tabItem {
+//                Image(systemName: "exclamationmark.triangle")
                 Image("problem")
                 Text("Slow Zones")
             }.tag(2)
@@ -72,8 +74,6 @@ struct GoodServiceTabView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             GoodServiceTabView(routeInfoViewModel: previewViewModel)
-//            GoodServiceTabView(routeInfoViewModel: previewViewModel)
-//                .previewDevice("iPad Pro (9.7-inch)")
         }
     }
 }

@@ -14,6 +14,10 @@ struct RouteList: View {
     
     var body: some View {
         ZStack {
+            if routeInfoVM.routes.count == 0 {
+                ProgressView()
+                    .progressViewStyle(CircularProgressViewStyle(tint: .green))
+            }
             routeList
         }
             .sheet(isPresented: $showAboutModal) {
@@ -28,18 +32,19 @@ extension RouteList {
             List(content: content)
                 .listStyle(InsetGroupedListStyle())
                 .navigationBarTitle(Text("Trains"))
-                .navigationBarItems(leading: VStack{
-                    Text("Status of New York City Subway")
-                        .font(.caption)
-                        .textCase(.uppercase)
-                },
-                trailing: VStack {
-                    Button(action: {
-                        self.showAboutModal.toggle()
-                    }, label: {
-                        Image(systemName: "info.circle")
+                .navigationBarItems(
+                    leading: VStack {
+                        Text("Status of New York City Subway")
+                            .font(.caption)
+                            .textCase(.uppercase)
+                    },
+                    trailing: VStack {
+                        Button(action: {
+                            self.showAboutModal.toggle()
+                        }, label: {
+                            Image(systemName: "info.circle")
+                        })
                     })
-                })
         }
     }
     
