@@ -48,7 +48,7 @@
 		2ACC21FE24A18D74005B36D0 /* RouteDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACC21F924A18D74005B36D0 /* RouteDirection.swift */; };
 		2ACC21FF24A18D74005B36D0 /* LineDirectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACC21FA24A18D74005B36D0 /* LineDirectionViewModel.swift */; };
 		2ACC220224A18D74005B36D0 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACC21FD24A18D74005B36D0 /* Line.swift */; };
-		2ACC220424A18D87005B36D0 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACC220324A18D87005B36D0 /* Route.swift */; };
+		2ACC220424A18D87005B36D0 /* RouteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACC220324A18D87005B36D0 /* RouteViewModel.swift */; };
 		2ACC220D24A195B4005B36D0 /* RouteList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACC220C24A195B4005B36D0 /* RouteList.swift */; };
 		2ACC220F24A19A27005B36D0 /* RouteRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACC220E24A19A27005B36D0 /* RouteRow.swift */; };
 		2ACC221124A19B27005B36D0 /* RouteDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACC221024A19B27005B36D0 /* RouteDetail.swift */; };
@@ -139,7 +139,7 @@
 		2ACC21F924A18D74005B36D0 /* RouteDirection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteDirection.swift; sourceTree = "<group>"; };
 		2ACC21FA24A18D74005B36D0 /* LineDirectionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineDirectionViewModel.swift; sourceTree = "<group>"; };
 		2ACC21FD24A18D74005B36D0 /* Line.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
-		2ACC220324A18D87005B36D0 /* Route.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
+		2ACC220324A18D87005B36D0 /* RouteViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteViewModel.swift; sourceTree = "<group>"; };
 		2ACC220C24A195B4005B36D0 /* RouteList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteList.swift; sourceTree = "<group>"; };
 		2ACC220E24A19A27005B36D0 /* RouteRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteRow.swift; sourceTree = "<group>"; };
 		2ACC221024A19B27005B36D0 /* RouteDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteDetail.swift; sourceTree = "<group>"; };
@@ -332,7 +332,7 @@
 			children = (
 				2ACC21DA24A17A41005B36D0 /* RouteInfoViewModel.swift */,
 				2A1BFDF624B64E1100703EAB /* RouteMapsStore.swift */,
-				2ACC220324A18D87005B36D0 /* Route.swift */,
+				2ACC220324A18D87005B36D0 /* RouteViewModel.swift */,
 				2A68559C24A3B0B5006A8941 /* RouteDestination.swift */,
 				2ACC21F924A18D74005B36D0 /* RouteDirection.swift */,
 				2ACC22E624A2CEAB005B36D0 /* Borough.swift */,
@@ -636,7 +636,7 @@
 				2ACC21E424A17C00005B36D0 /* StatusResponse.swift in Sources */,
 				2ACC21E924A17DE8005B36D0 /* StationDetails.swift in Sources */,
 				2ACC220D24A195B4005B36D0 /* RouteList.swift in Sources */,
-				2ACC220424A18D87005B36D0 /* Route.swift in Sources */,
+				2ACC220424A18D87005B36D0 /* RouteViewModel.swift in Sources */,
 				2ACC21FE24A18D74005B36D0 /* RouteDirection.swift in Sources */,
 				2A1BFD9C24ABD48E00703EAB /* RouteMap.swift in Sources */,
 				2ACC21D824A17974005B36D0 /* UIImage+RoundedCorners.swift in Sources */,
