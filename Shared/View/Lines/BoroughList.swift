@@ -18,7 +18,7 @@ struct BoroughList: View {
                 .listStyle(InsetGroupedListStyle())
                 .navigationTitle(Text("Boroughs"))
                 .navigationBarItems(leading: VStack{
-                    Text("status for new york city subway")
+                    Text("status of new york city subway")
                         .font(.caption)
                         .textCase(.uppercase)
                 },

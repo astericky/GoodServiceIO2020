@@ -25,7 +25,7 @@ final class RouteInfoViewModel: ObservableObject {
     init() {
 //        #if DEBUG
 //        self.timestamp = routesInfo.timestamp
-//        self.routes = routesInfo.routes.map({ create(route: $0) })
+//        self.routes = routesInfo.routes.map(Route.init(item:))
 //        self.boroughs = routesInfo.lines.map { boroughs in
 //            let lines = boroughs.value.map { line -> Line in
 //                let lineRoutes = line.routes.flatMap { route in
@@ -61,7 +61,7 @@ final class RouteInfoViewModel: ObservableObject {
                 },
                 receiveValue: { [weak self] value in
                     guard let self = self else { return }
-                    self.routeMaps = RouteMapsResponse(routes: value.routes, stops: value.stops)
+                    self.routeMaps = value
                 })
             .store(in: &subscriptions)
             
