@@ -16,22 +16,11 @@ final class RouteInfoViewModel: ObservableObject {
     @Published var routes: [Route] = []
     @Published var boroughs: [Borough] = []
     @Published var slowZones: [Line] = []
+    @Published var datetime: String = ""
 
     private var goodServiceFetcher = GoodServiceFetcher()
     private var disposables = Set<AnyCancellable>()
     private var routeMapCancellable: AnyCancellable?
-    private var timestamp = ""
-    var datetime: String {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
-        dateFormatter.timeZone = TimeZone.init(abbreviation: "EST")
-        let date = dateFormatter.date(from: timestamp)
-        let dateDisplayFomatter = DateFormatter()
-        dateDisplayFomatter.dateFormat = "MMM dd, yyyy h:mm a"
-        
-        return dateDisplayFomatter.string(from: date ?? Date())
-    }
-    
     
     init() {
 //        #if DEBUG
@@ -51,7 +40,7 @@ final class RouteInfoViewModel: ObservableObject {
 //
 //        self.slowZones = self.getSlowLines()
 //        #else
-        self.fetchRouteMap()
+//        self.fetchRouteMap()
         self.fetchRouteInfo()
 //        #endif
     }
@@ -92,7 +81,14 @@ final class RouteInfoViewModel: ObservableObject {
                 },
                 receiveValue: { [weak self] info in
                     guard let self = self else { return }
-                    self.timestamp = info.timestamp
+                    self.datetime = {
+                        if let date = ISO8601DateFormatter().date(from: info.timestamp) {
+                            let dateFormatter = DateFormatter()
+                            dateFormatter.dateFormat = "MMM dd, yyyy h:mm a"
+                            return dateFormatter.string(from: date)
+                        }
+                        return ""
+                    }()
                     self.routes = info.routes.map({ self.create(route: $0) })
                     self.boroughs = info.lines.map { boroughs in
                         let lines = boroughs.value.map { line -> Line in
@@ -116,7 +112,7 @@ final class RouteInfoViewModel: ObservableObject {
     }
     
     private func reset() {
-        self.timestamp = ""
+        self.datetime = ""
         self.routes = []
         self.boroughs = []
         self.slowZones = []
