@@ -17,18 +17,19 @@ struct BoroughList: View {
             List(content: content)
                 .listStyle(InsetGroupedListStyle())
                 .navigationTitle(Text("Boroughs"))
-                .navigationBarItems(leading: VStack{
-                    Text("status of new york city subway")
-                        .font(.caption)
-                        .textCase(.uppercase)
-                },
-                trailing: VStack {
-                    Button(action: {
-                        self.showAboutModal.toggle()
-                    }, label: {
-                        Image(systemName: "info.circle")
+                .navigationBarItems(
+                    leading: VStack {
+                        Text("status of new york city subway")
+                            .font(.caption)
+                            .textCase(.uppercase)
+                    },
+                    trailing: VStack {
+                        Button(action: {
+                            self.showAboutModal.toggle()
+                        }, label: {
+                            Image(systemName: "info.circle")
+                        })
                     })
-                })
         }
             .sheet(isPresented: $showAboutModal) {
                 AboutModal()
