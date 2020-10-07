@@ -13,7 +13,7 @@ final class RouteInfoViewModel: ObservableObject {
         routes: [String : RouteMapsResponse.Route](),
         stops: [String : RouteMapsResponse.Stop]()
     )
-    @Published var routes: [Route] = []
+    @Published var routes: [RouteViewModel] = []
     @Published var boroughs: [Borough] = []
     @Published var slowZones: [Line] = []
     @Published var datetime: String = ""
@@ -90,13 +90,11 @@ final class RouteInfoViewModel: ObservableObject {
                         }
                         return dateFormatter.string(from: Date())
                     }()
-                    self.routes = info.routes.map(Route.init(item:))
+                    self.routes = info.routes.map(RouteViewModel.init(item:))
                     self.boroughs = info.lines.map { boroughs in
                         let lines = boroughs.value.map { line -> Line in
                             let lineRoutes = line.routes.flatMap { route in
-                                return self.routes.filter {
-                                    return $0.id == route.id
-                                }
+                                self.routes.filter { $0.id == route.id }
                             }
                             return Line(item: line, routes: lineRoutes)
                         }

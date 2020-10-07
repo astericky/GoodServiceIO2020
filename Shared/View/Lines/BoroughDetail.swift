@@ -35,7 +35,7 @@ struct BoroughDetail_Previews: PreviewProvider {
                     return $0.id == route.id
                 }
             }
-            let routesData = routestData.map { Route(item: $0) }
+            let routesData = routestData.map { RouteViewModel(item: $0) }
             return Line(item: item, routes: routesData)
         }
     }()

@@ -9,7 +9,7 @@ import SwiftUI
 import MapKit
 
 struct MapModal: View {
-    var route: Route
+    var route: RouteViewModel
     
     @State private var region: MKCoordinateRegion = MKCoordinateRegion(center: centerCoordinate, span: span)
     var body: some View {
@@ -21,7 +21,7 @@ struct MapModal: View {
 }
 
 struct MapModal_Previews: PreviewProvider {
-    static var route = Route(item: routesInfo.routes[8])
+    static var route = RouteViewModel(item: routesInfo.routes[8])
     static var previews: some View {
         MapModal(route: route)
     }

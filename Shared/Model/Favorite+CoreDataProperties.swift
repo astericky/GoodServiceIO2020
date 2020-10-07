@@ -17,7 +17,7 @@ extension Favorite {
     @NSManaged var status: String
     @NSManaged var color: String
     
-    static func createFavorite(route: Route,
+    static func createFavorite(route: RouteViewModel,
                                using viewContext: NSManagedObjectContext) {
         let favorite = Favorite(context: viewContext)
         favorite.id = UUID()
@@ -32,7 +32,7 @@ extension Favorite {
         FetchRequest(entity: Favorite.entity(), sortDescriptors: [])
     }
     
-    static func fetchFavorite(route: Route) -> FetchRequest<Favorite> {
+    static func fetchFavorite(route: RouteViewModel) -> FetchRequest<Favorite> {
         let titlePredicate = NSPredicate(format: "title = %@", route.name)
         let subtitlePredicate = NSPredicate(format: "subtitle = %@", route.alternateName)
         let subPredicate = [titlePredicate, subtitlePredicate]

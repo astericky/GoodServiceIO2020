@@ -10,7 +10,7 @@ import SwiftUI
 
 struct Line: Identifiable {
     var item: InfoResponse.Line
-    var routes: [Route]
+    var routes: [RouteViewModel]
     
      var id: String {
         return item.id

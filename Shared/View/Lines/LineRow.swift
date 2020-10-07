@@ -52,7 +52,7 @@ struct LineRow_Previews: PreviewProvider {
                 }
             }
             // properly format routes
-            let routesData = routestData.map { Route(item: $0) }
+            let routesData = routestData.map { RouteViewModel(item: $0) }
             return Line(item: item, routes: routesData)
         }
     }()

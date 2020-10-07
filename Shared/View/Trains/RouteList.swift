@@ -61,7 +61,7 @@ extension RouteList {
         }
     }
     
-    private func selectView(for route: Route) -> AnyView {
+    private func selectView(for route: RouteViewModel) -> AnyView {
         if route.status == "No Service"
             || route.status == "Not Scheduled" {
             return AnyView(RouteNoServiceRow(route: route))

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct RouteNoServiceRow: View {
-    let route: Route
+    let route: RouteViewModel
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -59,7 +59,7 @@ extension RouteNoServiceRow {
 }
 
 struct RouteNoServiceRow_Previews: PreviewProvider {
-    static var route = Route(item: routesInfo.routes[0])
+    static var route = RouteViewModel(item: routesInfo.routes[0])
     static var previews: some View {
         RouteNoServiceRow(route: route)
     }

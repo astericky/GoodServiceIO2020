@@ -9,7 +9,7 @@ import SwiftUI
 
 struct RouteRow: View {
     
-    let route: Route
+    let route: RouteViewModel
         
     var body: some View {
         NavigationLink(destination: RouteDetail(route: route)) {
@@ -65,8 +65,8 @@ extension RouteRow {
 }
 
 struct RouteRow_Previews: PreviewProvider {
-    static var route = Route(item: routesInfo.routes[0])
-    static var route7x = Route(item: routesInfo.routes[8])
+    static var route = RouteViewModel(item: routesInfo.routes[0])
+    static var route7x = RouteViewModel(item: routesInfo.routes[8])
     static var favoritesVM = FavoritesViewModel()
     static var previews: some View {
         Group {

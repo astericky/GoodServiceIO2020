@@ -9,7 +9,7 @@ import SwiftUI
 
 struct FavoriteButton: View {
     
-    var route: Route
+    var route: RouteViewModel
     
     @Environment(\.managedObjectContext) var moc
 
@@ -21,7 +21,7 @@ struct FavoriteButton: View {
 
     @State var isFavorite = false
     
-    init(route: Route) {
+    init(route: RouteViewModel) {
         self.route = route
         _fetchRequest = Favorite.fetchFavorite(route: route)
     }
@@ -48,7 +48,7 @@ struct FavoriteButton: View {
 }
 
 struct FavoriteButton_Previews: PreviewProvider {
-    static var route = Route(item: routesInfo.routes[0])
+    static var route = RouteViewModel(item: routesInfo.routes[0])
     static var previews: some View {
         FavoriteButton(route: route)
     }

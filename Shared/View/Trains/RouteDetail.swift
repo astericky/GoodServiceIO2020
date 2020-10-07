@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct RouteDetail: View {
-    var route: Route
+    var route: RouteViewModel
 
     @State private var showMapModal = false
     
@@ -82,8 +82,8 @@ extension RouteDetail {
 }
 
 struct RouteDetail_Previews: PreviewProvider {
-    static var route = Route(item: routesInfo.routes[8])
-    static var route2 = Route(item: routesInfo.routes[9])
+    static var route = RouteViewModel(item: routesInfo.routes[8])
+    static var route2 = RouteViewModel(item: routesInfo.routes[9])
     static var previews: some View {
         Group {
             RouteDetail(route: route)

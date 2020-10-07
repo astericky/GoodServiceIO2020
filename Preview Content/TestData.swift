@@ -15,7 +15,7 @@ let routeMapInfo: RouteMapsResponse = load("route-map.json")
 var lines: [Line] = {
     routesInfo.lines["Manhattan"]!.map { item in
         let routesTestData = routesInfo.routes.filter { $0.id == item.id }
-        let routesData = routesTestData.map { Route(item: $0) }
+        let routesData = routesTestData.map(RouteViewModel.init(item:))
         return Line(item: item, routes: routesData)
     }
 }()

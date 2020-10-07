@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct Route: Identifiable {
+struct RouteViewModel: Identifiable {
     var item: InfoResponse.Route
     
     var id: String {
@@ -73,8 +73,8 @@ struct Route: Identifiable {
 
 // Used to conform to the protocal Hashable with gives one the ability to
 // differentiate between one item compared to another item
-extension Route: Hashable {
-    static func == (lhs: Route, rhs: Route) -> Bool {
+extension RouteViewModel: Hashable {
+    static func == (lhs: RouteViewModel, rhs: RouteViewModel) -> Bool {
         return lhs.id == rhs.id
     }
     

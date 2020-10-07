@@ -9,7 +9,7 @@ import SwiftUI
 
 
 struct FavoriteRow: View {
-    let route: Route
+    let route: RouteViewModel
     
     var body: some View {
         NavigationLink(destination: RouteDetail(route: route)) {
