@@ -20,8 +20,8 @@ final class RouteInfoViewModel: ObservableObject {
 
     private var goodServiceFetcher = GoodServiceFetcher()
     private var subscriptions = Set<AnyCancellable>()
-//    private var routeMapCancellable: AnyCancellable?
-    
+ 
+
     init() {
 //        #if DEBUG
 //        self.timestamp = routesInfo.timestamp
