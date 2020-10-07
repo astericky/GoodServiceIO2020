@@ -19,8 +19,8 @@ final class RouteInfoViewModel: ObservableObject {
     @Published var datetime: String = ""
 
     private var goodServiceFetcher = GoodServiceFetcher()
-    private var disposables = Set<AnyCancellable>()
-    private var routeMapCancellable: AnyCancellable?
+    private var subscriptions = Set<AnyCancellable>()
+//    private var routeMapCancellable: AnyCancellable?
     
     init() {
 //        #if DEBUG
@@ -40,14 +40,14 @@ final class RouteInfoViewModel: ObservableObject {
 //
 //        self.slowZones = self.getSlowLines()
 //        #else
-//        self.fetchRouteMap()
+        self.fetchRouteMap()
         self.fetchRouteInfo()
 //        #endif
     }
     
     
     func fetchRouteMap() {
-        routeMapCancellable = goodServiceFetcher.getRouteMaps()
+        goodServiceFetcher.getRouteMaps()
             .receive(on: DispatchQueue.main)
             .sink(
                 receiveCompletion: { [weak self] value in
@@ -63,6 +63,7 @@ final class RouteInfoViewModel: ObservableObject {
                     guard let self = self else { return }
                     self.routeMaps = RouteMapsResponse(routes: value.routes, stops: value.stops)
                 })
+            .store(in: &subscriptions)
             
     }
     
@@ -82,14 +83,14 @@ final class RouteInfoViewModel: ObservableObject {
                 receiveValue: { [weak self] info in
                     guard let self = self else { return }
                     self.datetime = {
+                        let dateFormatter = DateFormatter()
+                        dateFormatter.dateFormat = "MMM dd, yyyy h:mm a"
                         if let date = ISO8601DateFormatter().date(from: info.timestamp) {
-                            let dateFormatter = DateFormatter()
-                            dateFormatter.dateFormat = "MMM dd, yyyy h:mm a"
                             return dateFormatter.string(from: date)
                         }
-                        return ""
+                        return dateFormatter.string(from: Date())
                     }()
-                    self.routes = info.routes.map({ self.create(route: $0) })
+                    self.routes = info.routes.map(Route.init(item:))
                     self.boroughs = info.lines.map { boroughs in
                         let lines = boroughs.value.map { line -> Line in
                             let lineRoutes = line.routes.flatMap { route in
@@ -104,11 +105,7 @@ final class RouteInfoViewModel: ObservableObject {
                     
                     self.slowZones = self.getSlowLines()
                 })
-            .store(in: &disposables)
-    }
-    
-    private func create(route: InfoResponse.Route) -> Route {
-        return Route(item: route)
+            .store(in: &subscriptions)
     }
     
     private func reset() {
