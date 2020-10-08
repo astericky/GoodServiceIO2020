@@ -12,9 +12,7 @@ struct BoroughDetail: View {
     
     var body: some View {
         List(borough.lines.lines) { line in
-            NavigationLink(destination: LineDetail(line: line)) {
-                LineRow(line: line)
-            }
+            self.selectView(for: line)
         }
         .listStyle(InsetGroupedListStyle())
         .navigationBarTitle(Text(borough.name))
@@ -24,7 +22,21 @@ struct BoroughDetail: View {
             })
         })
     }
+    
+    private func selectView(for line: LineViewModel) -> AnyView {
+        if line.status == "No Service"
+            || line.status == "Not Scheduled" {
+            return AnyView(LineNoServiceRow(line: line))
+        } else {
+            return AnyView(
+                LineRow(line: line)
+                    .padding(0)
+            )
+        }
+    }
 }
+
+
 
 struct BoroughDetail_Previews: PreviewProvider {
     static var routes = routesInfo.routes

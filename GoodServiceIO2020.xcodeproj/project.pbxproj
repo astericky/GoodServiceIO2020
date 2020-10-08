@@ -12,6 +12,7 @@
 		2A1BFD9C24ABD48E00703EAB /* RouteMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1BFD9B24ABD48E00703EAB /* RouteMap.swift */; };
 		2A1BFDF524B63BCC00703EAB /* Bundle+Decode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1BFDF424B63BCC00703EAB /* Bundle+Decode.swift */; };
 		2A1BFDF724B64E1100703EAB /* RouteMapsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1BFDF624B64E1100703EAB /* RouteMapsStore.swift */; };
+		2A4C6F78252EEC5400FA34CB /* LineNoServiceRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4C6F77252EEC5400FA34CB /* LineNoServiceRow.swift */; };
 		2A68559924A33CAA006A8941 /* RouteDestinationTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A68559824A33CAA006A8941 /* RouteDestinationTable.swift */; };
 		2A68559B24A33CC0006A8941 /* RouteDestinationRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A68559A24A33CC0006A8941 /* RouteDestinationRow.swift */; };
 		2A68559D24A3B0B5006A8941 /* RouteDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A68559C24A3B0B5006A8941 /* RouteDestination.swift */; };
@@ -98,6 +99,7 @@
 		2A1BFD9B24ABD48E00703EAB /* RouteMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteMap.swift; sourceTree = "<group>"; };
 		2A1BFDF424B63BCC00703EAB /* Bundle+Decode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Decode.swift"; sourceTree = "<group>"; };
 		2A1BFDF624B64E1100703EAB /* RouteMapsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteMapsStore.swift; sourceTree = "<group>"; };
+		2A4C6F77252EEC5400FA34CB /* LineNoServiceRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineNoServiceRow.swift; sourceTree = "<group>"; };
 		2A68559824A33CAA006A8941 /* RouteDestinationTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteDestinationTable.swift; sourceTree = "<group>"; };
 		2A68559A24A33CC0006A8941 /* RouteDestinationRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteDestinationRow.swift; sourceTree = "<group>"; };
 		2A68559C24A3B0B5006A8941 /* RouteDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteDestination.swift; sourceTree = "<group>"; };
@@ -405,6 +407,7 @@
 				2ACC22EA24A2D274005B36D0 /* BoroughList.swift */,
 				2ACC22ED24A2D35E005B36D0 /* BoroughDetail.swift */,
 				2AF2D2BB24A44784009206F9 /* LineRow.swift */,
+				2A4C6F77252EEC5400FA34CB /* LineNoServiceRow.swift */,
 				2AF2D2B724A444E2009206F9 /* LineDetail.swift */,
 				2AC08E842527A5A4001A7E08 /* LineDirectionTable.swift */,
 				2AC08E8E2527A8C0001A7E08 /* LineDirectionRow.swift */,
@@ -616,6 +619,7 @@
 				2ACC21FF24A18D74005B36D0 /* LineDirectionViewModel.swift in Sources */,
 				2A1BFDF524B63BCC00703EAB /* Bundle+Decode.swift in Sources */,
 				2AF2D2BA24A446BE009206F9 /* HorizontalRouteList.swift in Sources */,
+				2A4C6F78252EEC5400FA34CB /* LineNoServiceRow.swift in Sources */,
 				2ACC21E324A17C00005B36D0 /* RouteMapsResponse.swift in Sources */,
 				2A1BFDF724B64E1100703EAB /* RouteMapsStore.swift in Sources */,
 				2ACC21F824A18687005B36D0 /* TestData.swift in Sources */,

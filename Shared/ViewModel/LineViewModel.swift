@@ -24,7 +24,7 @@ struct LineViewModel: Identifiable {
     }
     
     var routes: [LineRouteViewModel] {
-        item.routes.map(LineRouteViewModel.init(route:))
+        return item.routes.map(LineRouteViewModel.init(route:))
     }
     
     var north: [InfoResponse.Line.LineDirection] {

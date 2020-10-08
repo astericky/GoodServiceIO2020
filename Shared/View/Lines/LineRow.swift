@@ -13,28 +13,30 @@ struct LineRow: View {
     var line: LineViewModel
     
     var body: some View {
-        VStack {
-            HStack {
-                Text(line.name)
-                Spacer()
-            }
-            Spacer()
-            HStack(alignment: .bottom) {
-                ForEach(line.routes, id: \.self) { route in
-                    Text(route.name)
-                        .foregroundColor(.white)
-                        .frame(width: 25, height:25)
-                        .background(route.color)
-                        .clipShape(Circle())
-                        .minimumScaleFactor(0.01)
+        NavigationLink(destination: LineDetail(line: line)) {
+            VStack {
+                HStack {
+                    Text(line.name)
+                    Spacer()
                 }
                 Spacer()
-                Text(line.status)
-                    .font(.caption)
+                HStack(alignment: .bottom) {
+                    ForEach(line.routes, id: \.self) { route in
+                        Text(route.name)
+                            .foregroundColor(.white)
+                            .frame(width: 25, height:25)
+                            .background(route.color)
+                            .clipShape(Circle())
+                            .minimumScaleFactor(0.01)
+                    }
+                    Spacer()
+                    Text(line.status)
+                        .font(.caption)
+                }
+                .padding(0)
             }
-            .padding(0)
+            .padding(10)
         }
-        .padding(10)
     }
 }
 
