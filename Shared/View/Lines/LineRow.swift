@@ -10,7 +10,7 @@ import SwiftUI
 
 struct LineRow: View {
 
-    var line: Line
+    var line: LineViewModel
     
     var body: some View {
         VStack {
@@ -20,7 +20,7 @@ struct LineRow: View {
             }
             Spacer()
             HStack(alignment: .bottom) {
-                ForEach(line.routes) { route in
+                ForEach(line.routes, id: \.self) { route in
                     Text(route.name)
                         .foregroundColor(.white)
                         .frame(width: 25, height:25)
@@ -40,7 +40,7 @@ struct LineRow: View {
 
 struct LineRow_Previews: PreviewProvider {
     static var routes = routesInfo.routes
-    static var lines: [Line] = {
+    static var lines: [LineViewModel] = {
         // loop through line array
         routesInfo.lines["Manhattan"]!.map { item in
             // TOTO: Refactor this to use HASH for search
@@ -53,7 +53,7 @@ struct LineRow_Previews: PreviewProvider {
             }
             // properly format routes
             let routesData = routestData.map { RouteViewModel(item: $0) }
-            return Line(item: item, routes: routesData)
+            return LineViewModel(item: item)
         }
     }()
     static var previews: some View {

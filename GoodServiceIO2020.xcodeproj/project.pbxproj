@@ -47,16 +47,18 @@
 		2ACC21F824A18687005B36D0 /* TestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACC21F224A18687005B36D0 /* TestData.swift */; };
 		2ACC21FE24A18D74005B36D0 /* RouteDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACC21F924A18D74005B36D0 /* RouteDirection.swift */; };
 		2ACC21FF24A18D74005B36D0 /* LineDirectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACC21FA24A18D74005B36D0 /* LineDirectionViewModel.swift */; };
-		2ACC220224A18D74005B36D0 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACC21FD24A18D74005B36D0 /* Line.swift */; };
+		2ACC220224A18D74005B36D0 /* LineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACC21FD24A18D74005B36D0 /* LineViewModel.swift */; };
 		2ACC220424A18D87005B36D0 /* RouteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACC220324A18D87005B36D0 /* RouteViewModel.swift */; };
 		2ACC220D24A195B4005B36D0 /* RouteList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACC220C24A195B4005B36D0 /* RouteList.swift */; };
 		2ACC220F24A19A27005B36D0 /* RouteRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACC220E24A19A27005B36D0 /* RouteRow.swift */; };
 		2ACC221124A19B27005B36D0 /* RouteDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACC221024A19B27005B36D0 /* RouteDetail.swift */; };
 		2ACC221324A19B30005B36D0 /* RouteNoServiceRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACC221224A19B30005B36D0 /* RouteNoServiceRow.swift */; };
-		2ACC22E724A2CEAB005B36D0 /* Borough.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACC22E624A2CEAB005B36D0 /* Borough.swift */; };
+		2ACC22E724A2CEAB005B36D0 /* BoroughViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACC22E624A2CEAB005B36D0 /* BoroughViewModel.swift */; };
 		2ACC22EB24A2D274005B36D0 /* BoroughList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACC22EA24A2D274005B36D0 /* BoroughList.swift */; };
 		2ACC22EE24A2D35E005B36D0 /* BoroughDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACC22ED24A2D35E005B36D0 /* BoroughDetail.swift */; };
 		2ACC22FC24A327F0005B36D0 /* RouteListSubHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACC22FB24A327F0005B36D0 /* RouteListSubHeader.swift */; };
+		2AD351DA252E983B00CE44B2 /* LinesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD351D9252E983B00CE44B2 /* LinesViewModel.swift */; };
+		2AD351E8252EA34000CE44B2 /* LineRouteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD351E7252EA34000CE44B2 /* LineRouteViewModel.swift */; };
 		2ADE40FD25254B5300396BE6 /* Favorite+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADE40FC25254B5300396BE6 /* Favorite+CoreDataClass.swift */; };
 		2ADE410725254C1900396BE6 /* Favorite+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADE410625254C1900396BE6 /* Favorite+CoreDataProperties.swift */; };
 		2AF2D2B624A44468009206F9 /* SlowZoneList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF2D2B524A44468009206F9 /* SlowZoneList.swift */; };
@@ -138,16 +140,18 @@
 		2ACC21F224A18687005B36D0 /* TestData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestData.swift; sourceTree = "<group>"; };
 		2ACC21F924A18D74005B36D0 /* RouteDirection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteDirection.swift; sourceTree = "<group>"; };
 		2ACC21FA24A18D74005B36D0 /* LineDirectionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineDirectionViewModel.swift; sourceTree = "<group>"; };
-		2ACC21FD24A18D74005B36D0 /* Line.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
+		2ACC21FD24A18D74005B36D0 /* LineViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineViewModel.swift; sourceTree = "<group>"; };
 		2ACC220324A18D87005B36D0 /* RouteViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteViewModel.swift; sourceTree = "<group>"; };
 		2ACC220C24A195B4005B36D0 /* RouteList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteList.swift; sourceTree = "<group>"; };
 		2ACC220E24A19A27005B36D0 /* RouteRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteRow.swift; sourceTree = "<group>"; };
 		2ACC221024A19B27005B36D0 /* RouteDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteDetail.swift; sourceTree = "<group>"; };
 		2ACC221224A19B30005B36D0 /* RouteNoServiceRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteNoServiceRow.swift; sourceTree = "<group>"; };
-		2ACC22E624A2CEAB005B36D0 /* Borough.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Borough.swift; sourceTree = "<group>"; };
+		2ACC22E624A2CEAB005B36D0 /* BoroughViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoroughViewModel.swift; sourceTree = "<group>"; };
 		2ACC22EA24A2D274005B36D0 /* BoroughList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoroughList.swift; sourceTree = "<group>"; };
 		2ACC22ED24A2D35E005B36D0 /* BoroughDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoroughDetail.swift; sourceTree = "<group>"; };
 		2ACC22FB24A327F0005B36D0 /* RouteListSubHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteListSubHeader.swift; sourceTree = "<group>"; };
+		2AD351D9252E983B00CE44B2 /* LinesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinesViewModel.swift; sourceTree = "<group>"; };
+		2AD351E7252EA34000CE44B2 /* LineRouteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineRouteViewModel.swift; sourceTree = "<group>"; };
 		2ADE40FC25254B5300396BE6 /* Favorite+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Favorite+CoreDataClass.swift"; sourceTree = "<group>"; };
 		2ADE410625254C1900396BE6 /* Favorite+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Favorite+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		2AF2D2B524A44468009206F9 /* SlowZoneList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlowZoneList.swift; sourceTree = "<group>"; };
@@ -335,8 +339,10 @@
 				2ACC220324A18D87005B36D0 /* RouteViewModel.swift */,
 				2A68559C24A3B0B5006A8941 /* RouteDestination.swift */,
 				2ACC21F924A18D74005B36D0 /* RouteDirection.swift */,
-				2ACC22E624A2CEAB005B36D0 /* Borough.swift */,
-				2ACC21FD24A18D74005B36D0 /* Line.swift */,
+				2ACC22E624A2CEAB005B36D0 /* BoroughViewModel.swift */,
+				2AD351D9252E983B00CE44B2 /* LinesViewModel.swift */,
+				2ACC21FD24A18D74005B36D0 /* LineViewModel.swift */,
+				2AD351E7252EA34000CE44B2 /* LineRouteViewModel.swift */,
 				2ACC21FA24A18D74005B36D0 /* LineDirectionViewModel.swift */,
 				2A1BFD9B24ABD48E00703EAB /* RouteMap.swift */,
 				2AFC884125195FD300E6AC5C /* FavoritesViewModel.swift */,
@@ -602,6 +608,7 @@
 				2AF2D2C024A510ED009206F9 /* GoodServiceNavigationBarItems.swift in Sources */,
 				2ACC21E124A17C00005B36D0 /* GoodServiceError.swift in Sources */,
 				2A9764E9251906AA00EC0CCD /* Persistence.swift in Sources */,
+				2AD351E8252EA34000CE44B2 /* LineRouteViewModel.swift in Sources */,
 				2ACC22EB24A2D274005B36D0 /* BoroughList.swift in Sources */,
 				2AF2D2B824A444E2009206F9 /* LineDetail.swift in Sources */,
 				2ACC221324A19B30005B36D0 /* RouteNoServiceRow.swift in Sources */,
@@ -615,8 +622,9 @@
 				2AFC884225195FD300E6AC5C /* FavoritesViewModel.swift in Sources */,
 				2ACC221124A19B27005B36D0 /* RouteDetail.swift in Sources */,
 				2ACC22FC24A327F0005B36D0 /* RouteListSubHeader.swift in Sources */,
+				2AD351DA252E983B00CE44B2 /* LinesViewModel.swift in Sources */,
 				2ACC21DB24A17A41005B36D0 /* RouteInfoViewModel.swift in Sources */,
-				2ACC22E724A2CEAB005B36D0 /* Borough.swift in Sources */,
+				2ACC22E724A2CEAB005B36D0 /* BoroughViewModel.swift in Sources */,
 				2AF2D2BE24A4499A009206F9 /* StatusBar.swift in Sources */,
 				2A68559B24A33CC0006A8941 /* RouteDestinationRow.swift in Sources */,
 				2ACC21C024A16C79005B36D0 /* GoodServiceTabView.swift in Sources */,
@@ -624,7 +632,7 @@
 				2ACC21E624A17CCE005B36D0 /* InfoResponse.swift in Sources */,
 				2A1BFD5424A5B8D400703EAB /* AboutModal.swift in Sources */,
 				2ACC22EE24A2D35E005B36D0 /* BoroughDetail.swift in Sources */,
-				2ACC220224A18D74005B36D0 /* Line.swift in Sources */,
+				2ACC220224A18D74005B36D0 /* LineViewModel.swift in Sources */,
 				2ADE40FD25254B5300396BE6 /* Favorite+CoreDataClass.swift in Sources */,
 				2ACC21BE24A16C79005B36D0 /* GoodServiceIO2020App.swift in Sources */,
 				2A68559D24A3B0B5006A8941 /* RouteDestination.swift in Sources */,

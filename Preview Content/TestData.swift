@@ -12,11 +12,11 @@ let routesInfo: InfoResponse = load("info.json")
 let statsInfo: StatusResponse = load("stats.json")
 let routeMapInfo: RouteMapsResponse = load("route-map.json")
 
-var lines: [Line] = {
+var lines: [LineViewModel] = {
     routesInfo.lines["Manhattan"]!.map { item in
-        let routesTestData = routesInfo.routes.filter { $0.id == item.id }
-        let routesData = routesTestData.map(RouteViewModel.init(item:))
-        return Line(item: item, routes: routesData)
+//        let routesTestData = routesInfo.routes.filter { $0.id == item.id }
+//        let routesData = routesTestData.map(LineRouteViewModel.init(routes:))
+        return LineViewModel(item: item)
     }
 }()
 

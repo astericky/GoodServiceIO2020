@@ -9,7 +9,7 @@ import SwiftUI
 
 struct LineDetail: View {
     
-    var line: Line
+    var line: LineViewModel
     
     var body: some View {
         ScrollView {
@@ -31,7 +31,7 @@ extension LineDetail {
     var header: some View {
         HStack {
             VStack(alignment: .leading) {
-                HorizontalRouteList(routes: line.routes)
+                HorizontalRouteList(lineVM: line)
             }
             Spacer()
         }
@@ -63,7 +63,7 @@ extension LineDetail {
 
 struct LineDetail_Previews: PreviewProvider {
     static var routes = routesInfo.routes
-    static var lines: [Line] = {
+    static var lines: [LineViewModel] = {
         routesInfo.lines["Manhattan"]!.map { item in
             var routestData = item.routes.flatMap { route in
                 return routes.filter {
@@ -71,7 +71,7 @@ struct LineDetail_Previews: PreviewProvider {
                 }
             }
             let routesData = routestData.map { RouteViewModel(item: $0) }
-            return Line(item: item, routes: routesData)
+            return LineViewModel(item: item)
         }
     }()
     static var previews: some View {

@@ -8,9 +8,8 @@
 
 import SwiftUI
 
-struct Line: Identifiable {
+struct LineViewModel: Identifiable {
     var item: InfoResponse.Line
-    var routes: [RouteViewModel]
     
      var id: String {
         return item.id
@@ -22,6 +21,10 @@ struct Line: Identifiable {
     
     var destinations: InfoResponse.Line.Destination {
         item.destinations
+    }
+    
+    var routes: [LineRouteViewModel] {
+        item.routes.map(LineRouteViewModel.init(route:))
     }
     
     var north: [InfoResponse.Line.LineDirection] {
@@ -60,8 +63,8 @@ struct Line: Identifiable {
 
 // Used to conform to the protocal Hashable with gives one the ability to
 // differentiate between one item compared to another item
-extension Line: Hashable {
-    static func == (lhs: Line, rhs: Line) -> Bool {
+extension LineViewModel: Hashable {
+    static func == (lhs: LineViewModel, rhs: LineViewModel) -> Bool {
         return lhs.id == rhs.id
     }
     

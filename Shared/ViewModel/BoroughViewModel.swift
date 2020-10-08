@@ -7,16 +7,16 @@
 
 import Foundation
 
-struct Borough: Identifiable {
+struct BoroughViewModel: Identifiable {
     var name: String
-    var lines: [Line]
+    var lines: LinesViewModel
     var id = UUID()
 }
 
 // Used to conform to the protocal Hashable with gives one the ability to
 // differentiate between one item compared to another item
-extension Borough: Hashable {
-    static func == (lhs: Borough, rhs: Borough) -> Bool {
+extension BoroughViewModel: Hashable {
+    static func == (lhs: BoroughViewModel, rhs: BoroughViewModel) -> Bool {
         return lhs.id == rhs.id
     }
     

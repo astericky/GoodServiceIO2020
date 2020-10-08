@@ -14,8 +14,8 @@ final class RouteInfoViewModel: ObservableObject {
         stops: [String : RouteMapsResponse.Stop]()
     )
     @Published var routes: [RouteViewModel] = []
-    @Published var boroughs: [Borough] = []
-    @Published var slowZones: [Line] = []
+    @Published var boroughs: [BoroughViewModel] = []
+    @Published var slowZones: [LineViewModel] = []
     @Published var datetime: String = ""
 
     private var goodServiceFetcher = GoodServiceFetcher()
@@ -71,15 +71,7 @@ final class RouteInfoViewModel: ObservableObject {
         goodServiceFetcher.getInfo()
             .receive(on: DispatchQueue.main)
             .sink(
-                receiveCompletion: { [weak self] value in
-                    guard let self = self else { return }
-                    switch value {
-                    case .failure:
-                        self.reset()
-                    case .finished:
-                        break
-                    }
-                },
+                receiveCompletion: { _ in },
                 receiveValue: { [weak self] info in
                     guard let self = self else { return }
                     self.datetime = {
@@ -92,13 +84,8 @@ final class RouteInfoViewModel: ObservableObject {
                     }()
                     self.routes = info.routes.map(RouteViewModel.init(item:))
                     self.boroughs = info.lines.map { boroughs in
-                        let lines = boroughs.value.map { line -> Line in
-                            let lineRoutes = line.routes.flatMap { route in
-                                self.routes.filter { $0.id == route.id }
-                            }
-                            return Line(item: line, routes: lineRoutes)
-                        }
-                        return Borough.init(name: boroughs.key, lines: lines)
+                        BoroughViewModel(name: boroughs.key,
+                                         lines: LinesViewModel(lineItems: boroughs.value))
                     }
                     
                     self.slowZones = self.getSlowLines()
@@ -113,12 +100,17 @@ final class RouteInfoViewModel: ObservableObject {
         self.slowZones = []
     }
     
-    private func getSlowLines() -> [Line] {
-        var lines = self.boroughs.flatMap({
+    private func getSlowLines() -> [LineViewModel] {
+        let linesVMArray = self.boroughs.compactMap({
             $0.lines
         })
         
-        lines.sort { $0.maxTravelTime > $1.maxTravelTime }
+        let lines = linesVMArray.map { linesVM -> [LineViewModel] in
+            var linesArray = linesVM.lines
+            linesArray.sort { $0.maxTravelTime > $1.maxTravelTime }
+            return linesArray
+        }[0]
+        
         return Array(lines.prefix(10))
     }
     
