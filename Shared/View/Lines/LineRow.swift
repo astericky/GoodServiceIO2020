@@ -43,19 +43,8 @@ struct LineRow: View {
 struct LineRow_Previews: PreviewProvider {
     static var routes = routesInfo.routes
     static var lines: [LineViewModel] = {
-        // loop through line array
         routesInfo.lines["Manhattan"]!.map { item in
-            // TOTO: Refactor this to use HASH for search
-            // loop through line route
-            var routestData = item.routes.flatMap { route in
-                // filter out non matching routes
-                return routes.filter {
-                    return $0.id == route.id
-                }
-            }
-            // properly format routes
-            let routesData = routestData.map { RouteViewModel(item: $0) }
-            return LineViewModel(item: item)
+            LineViewModel(item: item)
         }
     }()
     static var previews: some View {
