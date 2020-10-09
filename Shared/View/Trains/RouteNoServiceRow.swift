@@ -58,9 +58,11 @@ extension RouteNoServiceRow {
     }
 }
 
+#if DEBUG
 struct RouteNoServiceRow_Previews: PreviewProvider {
     static var route = RouteViewModel(item: routesInfo.routes[0])
     static var previews: some View {
         RouteNoServiceRow(route: route)
     }
 }
+#endif

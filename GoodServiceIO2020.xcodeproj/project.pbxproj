@@ -23,13 +23,9 @@
 		2AC08E8F2527A8C0001A7E08 /* LineDirectionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC08E8E2527A8C0001A7E08 /* LineDirectionRow.swift */; };
 		2AC9844B24CB5B14009AD9B1 /* FavoritesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC9844A24CB5B14009AD9B1 /* FavoritesList.swift */; };
 		2ACC21B124A16C79005B36D0 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACC21B024A16C79005B36D0 /* Tests_iOS.swift */; };
-		2ACC21BC24A16C79005B36D0 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACC21BB24A16C79005B36D0 /* Tests_macOS.swift */; };
 		2ACC21BE24A16C79005B36D0 /* GoodServiceIO2020App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACC219524A16C78005B36D0 /* GoodServiceIO2020App.swift */; };
-		2ACC21BF24A16C79005B36D0 /* GoodServiceIO2020App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACC219524A16C78005B36D0 /* GoodServiceIO2020App.swift */; };
 		2ACC21C024A16C79005B36D0 /* GoodServiceTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACC219624A16C78005B36D0 /* GoodServiceTabView.swift */; };
-		2ACC21C124A16C79005B36D0 /* GoodServiceTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACC219624A16C78005B36D0 /* GoodServiceTabView.swift */; };
 		2ACC21C224A16C79005B36D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2ACC219724A16C79005B36D0 /* Assets.xcassets */; };
-		2ACC21C324A16C79005B36D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2ACC219724A16C79005B36D0 /* Assets.xcassets */; };
 		2ACC21D424A17893005B36D0 /* Double+Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACC21D324A17893005B36D0 /* Double+Format.swift */; };
 		2ACC21D624A178E0005B36D0 /* Color+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACC21D524A178E0005B36D0 /* Color+Hex.swift */; };
 		2ACC21D824A17974005B36D0 /* UIImage+RoundedCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACC21D724A17974005B36D0 /* UIImage+RoundedCorners.swift */; };
@@ -80,13 +76,6 @@
 			remoteGlobalIDString = 2ACC219B24A16C79005B36D0;
 			remoteInfo = iOS;
 		};
-		2ACC21B824A16C79005B36D0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2ACC219024A16C78005B36D0 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 2ACC21A324A16C79005B36D0;
-			remoteInfo = macOS;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -115,15 +104,9 @@
 		2ACC219724A16C79005B36D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2ACC219C24A16C79005B36D0 /* GoodServiceIO2020.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoodServiceIO2020.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2ACC219F24A16C79005B36D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2ACC21A424A16C79005B36D0 /* GoodServiceIO2020.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoodServiceIO2020.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		2ACC21A624A16C79005B36D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2ACC21A724A16C79005B36D0 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		2ACC21AC24A16C79005B36D0 /* Tests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2ACC21B024A16C79005B36D0 /* Tests_iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_iOS.swift; sourceTree = "<group>"; };
 		2ACC21B224A16C79005B36D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2ACC21B724A16C79005B36D0 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2ACC21BB24A16C79005B36D0 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
-		2ACC21BD24A16C79005B36D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2ACC21D324A17893005B36D0 /* Double+Format.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Format.swift"; sourceTree = "<group>"; };
 		2ACC21D524A178E0005B36D0 /* Color+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Hex.swift"; sourceTree = "<group>"; };
 		2ACC21D724A17974005B36D0 /* UIImage+RoundedCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+RoundedCorners.swift"; sourceTree = "<group>"; };
@@ -174,21 +157,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2ACC21A124A16C79005B36D0 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		2ACC21A924A16C79005B36D0 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2ACC21B424A16C79005B36D0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -254,9 +223,7 @@
 				2ACC219424A16C78005B36D0 /* Shared */,
 				2ACC21EC24A1866D005B36D0 /* Preview Content */,
 				2ACC219E24A16C79005B36D0 /* iOS */,
-				2ACC21A524A16C79005B36D0 /* macOS */,
 				2ACC21AF24A16C79005B36D0 /* Tests iOS */,
-				2ACC21BA24A16C79005B36D0 /* Tests macOS */,
 				2ACC219D24A16C79005B36D0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -280,9 +247,7 @@
 			isa = PBXGroup;
 			children = (
 				2ACC219C24A16C79005B36D0 /* GoodServiceIO2020.app */,
-				2ACC21A424A16C79005B36D0 /* GoodServiceIO2020.app */,
 				2ACC21AC24A16C79005B36D0 /* Tests iOS.xctest */,
-				2ACC21B724A16C79005B36D0 /* Tests macOS.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -295,15 +260,6 @@
 			path = iOS;
 			sourceTree = "<group>";
 		};
-		2ACC21A524A16C79005B36D0 /* macOS */ = {
-			isa = PBXGroup;
-			children = (
-				2ACC21A624A16C79005B36D0 /* Info.plist */,
-				2ACC21A724A16C79005B36D0 /* macOS.entitlements */,
-			);
-			path = macOS;
-			sourceTree = "<group>";
-		};
 		2ACC21AF24A16C79005B36D0 /* Tests iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -311,15 +267,6 @@
 				2ACC21B224A16C79005B36D0 /* Info.plist */,
 			);
 			path = "Tests iOS";
-			sourceTree = "<group>";
-		};
-		2ACC21BA24A16C79005B36D0 /* Tests macOS */ = {
-			isa = PBXGroup;
-			children = (
-				2ACC21BB24A16C79005B36D0 /* Tests_macOS.swift */,
-				2ACC21BD24A16C79005B36D0 /* Info.plist */,
-			);
-			path = "Tests macOS";
 			sourceTree = "<group>";
 		};
 		2ACC21D224A16EFD005B36D0 /* Extensions */ = {
@@ -441,9 +388,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2ACC219B24A16C79005B36D0 /* iOS */ = {
+		2ACC219B24A16C79005B36D0 /* GoodServiceIO */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2ACC21C624A16C79005B36D0 /* Build configuration list for PBXNativeTarget "iOS" */;
+			buildConfigurationList = 2ACC21C624A16C79005B36D0 /* Build configuration list for PBXNativeTarget "GoodServiceIO" */;
 			buildPhases = (
 				2ACC219824A16C79005B36D0 /* Sources */,
 				2ACC219924A16C79005B36D0 /* Frameworks */,
@@ -453,26 +400,9 @@
 			);
 			dependencies = (
 			);
-			name = iOS;
+			name = GoodServiceIO;
 			productName = iOS;
 			productReference = 2ACC219C24A16C79005B36D0 /* GoodServiceIO2020.app */;
-			productType = "com.apple.product-type.application";
-		};
-		2ACC21A324A16C79005B36D0 /* macOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 2ACC21C924A16C79005B36D0 /* Build configuration list for PBXNativeTarget "macOS" */;
-			buildPhases = (
-				2ACC21A024A16C79005B36D0 /* Sources */,
-				2ACC21A124A16C79005B36D0 /* Frameworks */,
-				2ACC21A224A16C79005B36D0 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = macOS;
-			productName = macOS;
-			productReference = 2ACC21A424A16C79005B36D0 /* GoodServiceIO2020.app */;
 			productType = "com.apple.product-type.application";
 		};
 		2ACC21AB24A16C79005B36D0 /* Tests iOS */ = {
@@ -493,24 +423,6 @@
 			productReference = 2ACC21AC24A16C79005B36D0 /* Tests iOS.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
-		2ACC21B624A16C79005B36D0 /* Tests macOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 2ACC21CF24A16C79005B36D0 /* Build configuration list for PBXNativeTarget "Tests macOS" */;
-			buildPhases = (
-				2ACC21B324A16C79005B36D0 /* Sources */,
-				2ACC21B424A16C79005B36D0 /* Frameworks */,
-				2ACC21B524A16C79005B36D0 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				2ACC21B924A16C79005B36D0 /* PBXTargetDependency */,
-			);
-			name = "Tests macOS";
-			productName = "Tests macOS";
-			productReference = 2ACC21B724A16C79005B36D0 /* Tests macOS.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -523,16 +435,9 @@
 					2ACC219B24A16C79005B36D0 = {
 						CreatedOnToolsVersion = 12.0;
 					};
-					2ACC21A324A16C79005B36D0 = {
-						CreatedOnToolsVersion = 12.0;
-					};
 					2ACC21AB24A16C79005B36D0 = {
 						CreatedOnToolsVersion = 12.0;
 						TestTargetID = 2ACC219B24A16C79005B36D0;
-					};
-					2ACC21B624A16C79005B36D0 = {
-						CreatedOnToolsVersion = 12.0;
-						TestTargetID = 2ACC21A324A16C79005B36D0;
 					};
 				};
 			};
@@ -549,10 +454,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2ACC219B24A16C79005B36D0 /* iOS */,
-				2ACC21A324A16C79005B36D0 /* macOS */,
+				2ACC219B24A16C79005B36D0 /* GoodServiceIO */,
 				2ACC21AB24A16C79005B36D0 /* Tests iOS */,
-				2ACC21B624A16C79005B36D0 /* Tests macOS */,
 			);
 		};
 /* End PBXProject section */
@@ -571,22 +474,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2ACC21A224A16C79005B36D0 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2ACC21C324A16C79005B36D0 /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		2ACC21AA24A16C79005B36D0 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2ACC21B524A16C79005B36D0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -655,15 +543,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2ACC21A024A16C79005B36D0 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2ACC21C124A16C79005B36D0 /* GoodServiceTabView.swift in Sources */,
-				2ACC21BF24A16C79005B36D0 /* GoodServiceIO2020App.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		2ACC21A824A16C79005B36D0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -672,26 +551,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2ACC21B324A16C79005B36D0 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2ACC21BC24A16C79005B36D0 /* Tests_macOS.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
 		2ACC21AE24A16C79005B36D0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2ACC219B24A16C79005B36D0 /* iOS */;
+			target = 2ACC219B24A16C79005B36D0 /* GoodServiceIO */;
 			targetProxy = 2ACC21AD24A16C79005B36D0 /* PBXContainerItemProxy */;
-		};
-		2ACC21B924A16C79005B36D0 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 2ACC21A324A16C79005B36D0 /* macOS */;
-			targetProxy = 2ACC21B824A16C79005B36D0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -747,6 +613,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -800,6 +667,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -822,11 +690,12 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.gayngler.GoodServiceIO2020;
+				MARKETING_VERSION = 0.5;
+				PRODUCT_BUNDLE_IDENTIFIER = com.swiftysanders.GoodServiceIO2020;
 				PRODUCT_NAME = GoodServiceIO2020;
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -845,60 +714,13 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.gayngler.GoodServiceIO2020;
+				MARKETING_VERSION = 0.5;
+				PRODUCT_BUNDLE_IDENTIFIER = com.swiftysanders.GoodServiceIO2020;
 				PRODUCT_NAME = GoodServiceIO2020;
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		2ACC21CA24A16C79005B36D0 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 2RQ82SNR8Q;
-				ENABLE_HARDENED_RUNTIME = YES;
-				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = macOS/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 10.16;
-				PRODUCT_BUNDLE_IDENTIFIER = com.swiftysanders.GoodServiceIO2020;
-				PRODUCT_NAME = GoodServiceIO2020;
-				SDKROOT = macosx;
-				SWIFT_VERSION = 5.0;
-			};
-			name = Debug;
-		};
-		2ACC21CB24A16C79005B36D0 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 2RQ82SNR8Q;
-				ENABLE_HARDENED_RUNTIME = YES;
-				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = macOS/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 10.16;
-				PRODUCT_BUNDLE_IDENTIFIER = com.swiftysanders.GoodServiceIO2020;
-				PRODUCT_NAME = GoodServiceIO2020;
-				SDKROOT = macosx;
-				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -947,50 +769,6 @@
 			};
 			name = Release;
 		};
-		2ACC21D024A16C79005B36D0 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 2RQ82SNR8Q;
-				INFOPLIST_FILE = "Tests macOS/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/../Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.gayngler.Tests-macOS";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = macOS;
-			};
-			name = Debug;
-		};
-		2ACC21D124A16C79005B36D0 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 2RQ82SNR8Q;
-				INFOPLIST_FILE = "Tests macOS/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/../Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.gayngler.Tests-macOS";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = macOS;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1003,20 +781,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2ACC21C624A16C79005B36D0 /* Build configuration list for PBXNativeTarget "iOS" */ = {
+		2ACC21C624A16C79005B36D0 /* Build configuration list for PBXNativeTarget "GoodServiceIO" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2ACC21C724A16C79005B36D0 /* Debug */,
 				2ACC21C824A16C79005B36D0 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		2ACC21C924A16C79005B36D0 /* Build configuration list for PBXNativeTarget "macOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2ACC21CA24A16C79005B36D0 /* Debug */,
-				2ACC21CB24A16C79005B36D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1026,15 +795,6 @@
 			buildConfigurations = (
 				2ACC21CD24A16C79005B36D0 /* Debug */,
 				2ACC21CE24A16C79005B36D0 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		2ACC21CF24A16C79005B36D0 /* Build configuration list for PBXNativeTarget "Tests macOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2ACC21D024A16C79005B36D0 /* Debug */,
-				2ACC21D124A16C79005B36D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

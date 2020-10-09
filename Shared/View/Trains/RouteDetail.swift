@@ -81,6 +81,7 @@ extension RouteDetail {
     }
 }
 
+#if DEBUG
 struct RouteDetail_Previews: PreviewProvider {
     static var route = RouteViewModel(item: routesInfo.routes[8])
     static var route2 = RouteViewModel(item: routesInfo.routes[9])
@@ -91,3 +92,4 @@ struct RouteDetail_Previews: PreviewProvider {
         }
     }
 }
+#endif

@@ -47,9 +47,11 @@ struct FavoriteButton: View {
     }
 }
 
+#if DEBUG
 struct FavoriteButton_Previews: PreviewProvider {
     static var route = RouteViewModel(item: routesInfo.routes[0])
     static var previews: some View {
         FavoriteButton(route: route)
     }
 }
+#endif

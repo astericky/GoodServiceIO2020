@@ -23,8 +23,10 @@ struct HorizontalRouteList: View {
     }
 }
 
+#if DEBUG
 struct HorizontalRouteList_Previews: PreviewProvider {
     static var previews: some View {
         HorizontalRouteList(lineVM: lines[0])
     }
 }
+#endif

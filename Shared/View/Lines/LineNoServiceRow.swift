@@ -36,9 +36,11 @@ struct LineNoServiceRow: View {
     }
 }
 
+#if DEBUG
 struct LineNoServiceRow_Previews: PreviewProvider {
     static var lines = LinesViewModel(lineItems: routesInfo.lines["Manhattan"]!)
     static var previews: some View {
         LineNoServiceRow(line: lines.lines[0])
     }
 }
+#endif

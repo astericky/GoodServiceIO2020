@@ -16,7 +16,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2ACC219B24A16C79005B36D0"
                BuildableName = "GoodServiceIO2020.app"
-               BlueprintName = "iOS"
+               BlueprintName = "GoodServiceIO"
                ReferencedContainer = "container:GoodServiceIO2020.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -56,7 +56,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2ACC219B24A16C79005B36D0"
             BuildableName = "GoodServiceIO2020.app"
-            BlueprintName = "iOS"
+            BlueprintName = "GoodServiceIO"
             ReferencedContainer = "container:GoodServiceIO2020.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -73,7 +73,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2ACC219B24A16C79005B36D0"
             BuildableName = "GoodServiceIO2020.app"
-            BlueprintName = "iOS"
+            BlueprintName = "GoodServiceIO"
             ReferencedContainer = "container:GoodServiceIO2020.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

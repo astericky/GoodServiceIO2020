@@ -20,9 +20,11 @@ struct MapModal: View {
     static let span = MKCoordinateSpan(latitudeDelta: 0.30, longitudeDelta: 0.30)
 }
 
+#if DEBUG
 struct MapModal_Previews: PreviewProvider {
     static var route = RouteViewModel(item: routesInfo.routes[8])
     static var previews: some View {
         MapModal(route: route)
     }
 }
+#endif

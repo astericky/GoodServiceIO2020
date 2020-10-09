@@ -37,7 +37,7 @@ struct BoroughDetail: View {
 }
 
 
-
+#if DEBUG
 struct BoroughDetail_Previews: PreviewProvider {
     static var routes = routesInfo.routes
     static var lines = LinesViewModel(lineItems: routesInfo.lines["Manhattan"]!)
@@ -46,3 +46,4 @@ struct BoroughDetail_Previews: PreviewProvider {
         BoroughDetail(borough: borough)
     }
 }
+#endif
