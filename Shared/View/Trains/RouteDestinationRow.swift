@@ -60,7 +60,6 @@ struct ColumnData: View {
     }
 }
 
-#if DEBUG
 struct RouteDirectionRow_Previews: PreviewProvider {
     static var name = routesInfo.routes[20].destinations.south[0]
     static var directions = routesInfo.routes[20].south.map { RouteDirection(item: $0) }
@@ -69,4 +68,3 @@ struct RouteDirectionRow_Previews: PreviewProvider {
         RouteDestinationRow(direction: destination.directions[0])
     }
 }
-#endif

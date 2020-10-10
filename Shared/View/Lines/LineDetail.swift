@@ -61,7 +61,6 @@ extension LineDetail {
     }
 }
 
-#if DEBUG
 struct LineDetail_Previews: PreviewProvider {
     static var routes = routesInfo.routes
     static var lines: [LineViewModel] = {
@@ -79,4 +78,3 @@ struct LineDetail_Previews: PreviewProvider {
         LineDetail(line: lines[0])
     }
 }
-#endif

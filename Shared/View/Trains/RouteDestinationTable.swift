@@ -39,7 +39,6 @@ extension RouteDestinationTable {
     }
 }
 
-#if DEBUG
 struct RouteDestinationTable_Previews: PreviewProvider {
     static var name = routesInfo.routes[20].destinations.south[0]
     static var directions = routesInfo.routes[20].south.map { RouteDirection(item: $0) }
@@ -49,4 +48,3 @@ struct RouteDestinationTable_Previews: PreviewProvider {
             .previewLayout(.fixed(width: 375, height: 500))
     }
 }
-#endif

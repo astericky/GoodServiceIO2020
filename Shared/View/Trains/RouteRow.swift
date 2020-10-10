@@ -64,7 +64,6 @@ extension RouteRow {
 
 }
 
-#if DEBUG
 struct RouteRow_Previews: PreviewProvider {
     static var route = RouteViewModel(item: routesInfo.routes[0])
     static var route7x = RouteViewModel(item: routesInfo.routes[8])
@@ -79,4 +78,3 @@ struct RouteRow_Previews: PreviewProvider {
         }
     }
 }
-#endif

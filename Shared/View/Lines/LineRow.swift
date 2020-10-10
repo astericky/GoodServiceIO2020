@@ -40,7 +40,6 @@ struct LineRow: View {
     }
 }
 
-#if DEBUG
 struct LineRow_Previews: PreviewProvider {
     static var routes = routesInfo.routes
     static var lines: [LineViewModel] = {
@@ -61,4 +60,3 @@ struct LineRow_Previews: PreviewProvider {
         }
     }
 }
-#endif
