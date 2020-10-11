@@ -35,7 +35,7 @@ struct LineRow: View {
                 }
                 .padding(0)
             }
-            .padding(10)
+            .padding(8)
         }
     }
 }

@@ -37,7 +37,7 @@ struct FavoriteRow: View {
                     }
                 }
             }
-            .padding()
+            .padding(.all, 8)
         }
     }
 }
