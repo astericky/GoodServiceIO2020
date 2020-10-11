@@ -39,13 +39,7 @@ struct RouteRow: View {
 
 extension RouteRow {
     var routeName: some View {
-        Text(route.name)
-            .font(.callout)
-            .fontWeight(.semibold)
-            .foregroundColor(.white)
-            .frame(width: 50.0, height: 50.0)
-            .background(route.color)
-            .clipShape(Circle())
+        RouteLogo(route: route)
     }
     
     var routeAlternateName: some View {
@@ -67,7 +61,6 @@ extension RouteRow {
 struct RouteRow_Previews: PreviewProvider {
     static var route = RouteViewModel(item: routesInfo.routes[0])
     static var route7x = RouteViewModel(item: routesInfo.routes[8])
-    static var favoritesVM = FavoritesViewModel()
     static var previews: some View {
         Group {
             RouteRow(route: route)

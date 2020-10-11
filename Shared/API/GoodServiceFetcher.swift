@@ -32,6 +32,7 @@ extension GoodServiceFetcher: GoodServiceFetchable {
         }
         return session.dataTaskPublisher(for: URLRequest(url: url))
             .map(\.data)
+            .print()
             .decode(type: InfoResponse.self, decoder: JSONDecoder())
             .mapError { error in
                 print(error)

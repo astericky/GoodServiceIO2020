@@ -37,8 +37,8 @@ struct InfoResponse: Codable {
     }
     
     struct RouteDestinations: Codable {
-        let north: [String]
-        let south: [String]
+        let north: [String]?
+        let south: [String]?
     }
     
     struct RouteDirection: Codable {

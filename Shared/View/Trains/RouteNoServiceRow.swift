@@ -33,13 +33,7 @@ struct RouteNoServiceRow: View {
 
 extension RouteNoServiceRow {
     var routeName: some View {
-        Text(route.name)
-            .font(.callout)
-            .fontWeight(.semibold)
-            .foregroundColor(.white)
-            .frame(width: 50.0, height: 50.0)
-            .background(route.color)
-            .clipShape(Circle())
+        RouteLogo(route: route)
     }
     
     var routeAlternateName: some View {

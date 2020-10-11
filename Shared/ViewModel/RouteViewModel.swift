@@ -53,19 +53,19 @@ struct RouteViewModel: Identifiable {
     }
     
     var northDestination: RouteDestination? {
-        guard item.destinations.north.count > 0 else {
+        guard let north = item.destinations.north, north.count > 0 else {
             return nil
         }
-        let name = item.destinations.north.joined(separator: " ,")
+        let name = north.joined(separator: " ,")
         let directions = item.north.map { RouteDirection(item: $0) }
         return RouteDestination(name: name, directions: directions)
     }
     
     var southDestination: RouteDestination? {
-        guard item.destinations.south.count > 0 else {
+        guard let south = item.destinations.south, south.count > 0 else {
             return nil
         }
-        let name = item.destinations.south.joined(separator: " ,")
+        let name = south.joined(separator: " ,")
         let directions = item.south.map { RouteDirection(item: $0) }
         return RouteDestination(name: name, directions: directions)
     }

@@ -15,9 +15,7 @@ struct SlowZoneList: View {
     var body: some View {
         NavigationView {
             List(routeInfoViewModel.slowZones, id: \.self) { line in
-                NavigationLink(destination: LineDetail(line: line)) {
-                    LineRow(line: line)
-                }
+                LineRow(line: line)
             }
             .listStyle(InsetGroupedListStyle())
             .navigationBarTitle(Text("Slow Zones"), displayMode: .large)
