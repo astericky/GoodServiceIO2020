@@ -24,8 +24,9 @@ extension RouteDestinationTable {
         HStack {
             Spacer()
             Text(destination.name)
-                .font(.headline)
-                .padding(.top, 16)
+                .font(.footnote)
+                .bold()
+                .padding(.top, 12)
             Spacer()
         }
     }

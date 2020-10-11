@@ -8,19 +8,23 @@
 import SwiftUI
 
 struct RouteDetail: View {
-    var route: RouteViewModel
 
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @State private var showMapModal = false
+    
+    var route: RouteViewModel
     
     var body: some View {
         ScrollView {
-            VStack(spacing: 0) {
+            VStack(alignment: .leading, spacing: 0) {
+                backButton
                 header
                 status
                 routeDestintations
             }
         }
         .id(UUID().uuidString)
+        .navigationBarHidden(true)
         .sheet(isPresented: $showMapModal) {
             MapModal(route: self.route)
         }
@@ -28,9 +32,22 @@ struct RouteDetail: View {
 }
 
 extension RouteDetail {
+    var backButton: some View {
+        Button(action: {
+            self.presentationMode.wrappedValue.dismiss()
+        }) {
+            HStack {
+                Image(systemName: "chevron.left")
+                Text("Trains")
+            }
+                .padding()
+        }
+    }
+    
     var header: some View {
         ZStack(alignment: .bottom) {
             HStack(alignment: .top) {
+                Spacer()
                 routeName
                 HStack {
                     isFavoriteButton
@@ -39,7 +56,8 @@ extension RouteDetail {
                 Spacer()
             }
 //            routeMapButton
-        }.padding(.init(top: 0, leading: 16, bottom: 16, trailing: 16))
+        }
+            .padding(.init(top: 0, leading: 16, bottom: 16, trailing: 16))
     }
     
     var routeName: some View {
@@ -74,7 +92,7 @@ extension RouteDetail {
                     .foregroundColor(route.statusColor)
                     .fixedSize()
                 Text("STATUS")
-                    .font(.callout)
+                    .font(.footnote)
             }
             Spacer()
         }
