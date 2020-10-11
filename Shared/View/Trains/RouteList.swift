@@ -33,11 +33,11 @@ extension RouteList {
                 .listStyle(InsetGroupedListStyle())
                 .navigationBarTitle(Text("Trains"))
                 .navigationBarItems(
-                    leading: VStack {
-                        Text("Status of New York City Subway")
-                            .font(.caption)
-                            .textCase(.uppercase)
-                    },
+//                    leading: VStack {
+//                        Text("Status of New York City Subway")
+//                            .font(.caption)
+//                            .textCase(.uppercase)
+//                    },
                     trailing: VStack {
                         Button(action: {
                             self.showAboutModal.toggle()
@@ -45,6 +45,20 @@ extension RouteList {
                             Image(systemName: "info.circle")
                         })
                     })
+        }
+    }
+    
+    private var navigationBar: some View {
+        HStack {
+            Text("Status of New York City Subway")
+                .font(.caption)
+                .textCase(.uppercase)
+            Spacer()
+//            Button(action: {
+//                self.showAboutModal.toggle()
+//            }, label: {
+//                Image(systemName: "info.circle")
+//            })
         }
     }
     

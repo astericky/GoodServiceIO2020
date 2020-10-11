@@ -38,20 +38,26 @@ extension RouteDetail {
         }) {
             HStack {
                 Image(systemName: "chevron.left")
+                    .font(.system(size: 22))
                 Text("Trains")
+                    .font(.system(size: 16))
             }
                 .padding()
+                .padding(.top, -4)
+                .padding(.leading, -2)
         }
     }
     
     var header: some View {
         ZStack(alignment: .bottom) {
-            HStack(alignment: .top) {
+            HStack() {
                 Spacer()
-                routeName
-                HStack {
-                    isFavoriteButton
-                    routeAlternateName
+                HStack(alignment: .top) {
+                    routeName
+                    HStack() {
+                        isFavoriteButton
+                        routeAlternateName
+                    }
                 }
                 Spacer()
             }
