@@ -27,7 +27,7 @@ struct RouteNoServiceRow: View {
                 }
             }
         }
-        .padding()
+        .padding(.all, 8)
     }
 }
 

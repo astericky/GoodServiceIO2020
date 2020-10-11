@@ -32,7 +32,7 @@ struct RouteRow: View {
                     }
                 }
             }
-            .padding()
+            .padding(.all, 8)
         }
     }
 }
