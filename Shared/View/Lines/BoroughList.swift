@@ -18,11 +18,6 @@ struct BoroughList: View {
                 .listStyle(InsetGroupedListStyle())
                 .navigationTitle(Text("Boroughs"))
                 .navigationBarItems(
-                    leading: VStack {
-                        Text("status of new york city subway")
-                            .font(.caption)
-                            .textCase(.uppercase)
-                    },
                     trailing: VStack {
                         Button(action: {
                             self.showAboutModal.toggle()

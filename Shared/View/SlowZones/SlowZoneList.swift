@@ -20,11 +20,6 @@ struct SlowZoneList: View {
             .listStyle(InsetGroupedListStyle())
             .navigationBarTitle(Text("Slow Zones"), displayMode: .large)
             .navigationBarItems(
-                leading: VStack {
-                    Text("status of new york city subway")
-                        .font(.caption)
-                        .textCase(.uppercase)
-                },
                 trailing: VStack {
                     Button(action: {
                         self.showAboutModal.toggle()
