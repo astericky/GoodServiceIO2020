@@ -65,8 +65,11 @@ extension FavoritesList {
     }
 }
 
-//struct FavoritesList_Previews: PreviewProvider {
-//    static var previews: some View {
-//        FavoritesList()
-//    }
-//}
+struct FavoritesList_Previews: PreviewProvider {
+    static var previews: some View {
+        let moc = PersistenceController.shared.container.viewContext
+        let routeInfoVM = RouteInfoViewModel()
+        FavoritesList(routeInfoVM: routeInfoVM)
+            .environment(\.managedObjectContext, moc)
+    }
+}

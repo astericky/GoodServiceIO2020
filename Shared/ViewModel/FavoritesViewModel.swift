@@ -16,27 +16,8 @@ class FavoritesViewModel: ObservableObject {
     
     
     func fetchAllFavorites() -> FetchRequest<Favorite> {
-//        DispatchQueue.main.async {
-//            self.favorites = PersistenceController.shared.getAllFavorites().map(FavoriteViewModel.init)
-//        }
         FetchRequest(entity: Favorite.entity(), sortDescriptors: [])
     }
-    
-//    func saveFavorite(route: Route) {
-//        do {
-//            try PersistenceController.shared.create(favorite: route)
-//        } catch {
-//            print(error.localizedDescription)
-//        }
-//    }
-//    
-//    func removeFavorite(route: Route) {
-//        do {
-//            try PersistenceController.shared.deleteFavorite(favorite: route)
-//        } catch {
-//            print(error.localizedDescription)
-//        }
-//    }
     
 }
 

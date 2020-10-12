@@ -288,12 +288,12 @@
 				2ACC220324A18D87005B36D0 /* RouteViewModel.swift */,
 				2A68559C24A3B0B5006A8941 /* RouteDestination.swift */,
 				2ACC21F924A18D74005B36D0 /* RouteDirection.swift */,
+				2A1BFD9B24ABD48E00703EAB /* RouteMap.swift */,
 				2ACC22E624A2CEAB005B36D0 /* BoroughViewModel.swift */,
 				2AD351D9252E983B00CE44B2 /* LinesViewModel.swift */,
 				2ACC21FD24A18D74005B36D0 /* LineViewModel.swift */,
 				2AD351E7252EA34000CE44B2 /* LineRouteViewModel.swift */,
 				2ACC21FA24A18D74005B36D0 /* LineDirectionViewModel.swift */,
-				2A1BFD9B24ABD48E00703EAB /* RouteMap.swift */,
 				2AFC884125195FD300E6AC5C /* FavoritesViewModel.swift */,
 			);
 			path = ViewModel;
