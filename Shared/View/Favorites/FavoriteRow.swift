@@ -42,9 +42,10 @@ struct FavoriteRow: View {
     }
 }
 
-//struct FavoriteRow_Previews: PreviewProvider {
-//    static var favorite = Favorites(context: <#T##NSManagedObjectContext#>)
-//    static var previews: some View {
-//        FavoriteRow()
-//    }
-//}
+struct FavoriteRow_Previews: PreviewProvider {
+    static var previews: some View {
+        let route = RouteViewModel(item: routesInfo.routes[0])
+        FavoriteRow(route: route)
+            .previewLayout(.fixed(width: 375, height: 90))
+    }
+}

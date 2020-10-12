@@ -39,7 +39,7 @@ extension RouteDetail {
             HStack {
                 Image(systemName: "chevron.left")
                     .font(.system(size: 22))
-                Text("Trains")
+                Text("Back")
                     .font(.system(size: 16))
             }
                 .padding()

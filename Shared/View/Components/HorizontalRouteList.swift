@@ -14,10 +14,12 @@ struct HorizontalRouteList: View {
         HStack {
             ForEach(lineVM.routes, id: \.self) { route in
                 Text(route.name)
+                    .minimumScaleFactor(0.6)
                     .foregroundColor(.white)
-                    .frame(width: 25, height:25)
-                    .background(route.color)
-                    .clipShape(Circle())
+                    .padding(4)
+                    .frame(width: 28, height: 28)
+                    .background(Circle()
+                                    .foregroundColor(route.color))
             }
         }
     }

@@ -20,6 +20,7 @@ struct InfoResponse: Codable {
         let status: String
         let alternateName: String?
         let color: String?
+        let textColor: String?
         let destinations: InfoResponse.RouteDestinations
         let north: [InfoResponse.RouteDirection]
         let south: [InfoResponse.RouteDirection]
@@ -30,6 +31,7 @@ struct InfoResponse: Codable {
             case status
             case alternateName = "alternate_name"
             case color
+            case textColor = "text_color"
             case destinations
             case north
             case south
@@ -112,6 +114,14 @@ struct InfoResponse: Codable {
             var id: String
             var name: String
             var color: String
+            var textColor: String?
+            
+            enum codingKeys: String, CodingKey {
+                case id
+                case name
+                case color
+                case textColor = "text_color"
+            }
         }
     }
 }

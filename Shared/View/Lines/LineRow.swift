@@ -21,14 +21,7 @@ struct LineRow: View {
                 }
                 Spacer()
                 HStack(alignment: .bottom) {
-                    ForEach(line.routes, id: \.self) { route in
-                        Text(route.name)
-                            .foregroundColor(.white)
-                            .frame(width: 25, height:25)
-                            .background(route.color)
-                            .clipShape(Circle())
-                            .minimumScaleFactor(0.01)
-                    }
+                    HorizontalRouteList(lineVM: line)
                     Spacer()
                     Text(line.status)
                         .font(.caption)

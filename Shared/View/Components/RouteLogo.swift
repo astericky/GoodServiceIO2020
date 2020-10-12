@@ -13,6 +13,7 @@ struct RouteLogo: View {
         Text(route.name)
             .font(.callout)
             .fontWeight(.semibold)
+            .minimumScaleFactor(0.6)
             .foregroundColor(.white)
             .frame(width: 50.0, height: 50.0)
             .background(
