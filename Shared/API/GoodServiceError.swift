@@ -12,3 +12,7 @@ enum GoodServiceError: Error {
     case parsing(description: String)
     case network(description: String)
 }
+
+enum DateError: Error {
+    case error(description: String)
+}

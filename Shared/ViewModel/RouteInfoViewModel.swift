@@ -77,10 +77,7 @@ final class RouteInfoViewModel: ObservableObject {
                     self.datetime = {
                         let dateFormatter = DateFormatter()
                         dateFormatter.dateFormat = "MMM dd, yyyy h:mm a"
-                        if let date = ISO8601DateFormatter().date(from: info.timestamp) {
-                            return dateFormatter.string(from: date)
-                        }
-                        return dateFormatter.string(from: Date())
+                        return dateFormatter.string(from: info.timestamp)
                     }()
                     self.routes = info.routes.map(RouteViewModel.init(item:))
                     self.boroughs = info.lines.map { boroughs in

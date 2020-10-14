@@ -10,7 +10,7 @@ import Foundation
 
 
 struct InfoResponse: Codable {
-    let timestamp: String
+    let timestamp: Date
     let routes: [InfoResponse.Route]
     let lines: [String: [InfoResponse.Line]]
     

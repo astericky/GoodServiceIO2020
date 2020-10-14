@@ -30,10 +30,22 @@ extension GoodServiceFetcher: GoodServiceFetchable {
             let error = GoodServiceError.network(description: "Couldn't create url.")
             return Fail(error: error).eraseToAnyPublisher()
         }
+        
+        
+        let decoder = JSONDecoder()
+        decoder.dateDecodingStrategy = .custom({ (decoder) -> Date in
+            let container = try decoder.singleValueContainer()
+            let dateString = try container.decode(String.self)
+            if let date = ISO8601DateFormatter().date(from: dateString) {
+                return date
+            }
+            throw DateError.error(description: "There was an error decoding the date.")
+        })
+        
         return session.dataTaskPublisher(for: URLRequest(url: url))
             .map(\.data)
             .print()
-            .decode(type: InfoResponse.self, decoder: JSONDecoder())
+            .decode(type: InfoResponse.self, decoder: decoder)
             .mapError { error in
                 print(error)
                 return .network(description: error.localizedDescription)
