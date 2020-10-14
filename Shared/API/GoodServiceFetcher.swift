@@ -23,13 +23,21 @@ class GoodServiceFetcher {
 }
 
 extension GoodServiceFetcher: GoodServiceFetchable {
+    static let bundleInfoURL = Bundle.main.url(forResource: "info", withExtension: "json")
+    static let infoURL = URL(string: "https://www.goodservice.io/api/info")
+    
     func getInfo() -> AnyPublisher<InfoResponse, GoodServiceError> {
-        let urlString = "https://www.goodservice.io/api/info"
-        
-        guard let url = URL(string: urlString) else {
-            let error = GoodServiceError.network(description: "Couldn't create url.")
-            return Fail(error: error).eraseToAnyPublisher()
-        }
+        #if DEBUG
+            guard let url = GoodServiceFetcher.infoURL else {
+                let error = GoodServiceError.network(description: "Couldn't create url.")
+                return Fail(error: error).eraseToAnyPublisher()
+            }
+        #else
+            guard let url = GoodServiceFetcher.infoURL else {
+                let error = GoodServiceError.network(description: "Couldn't create url.")
+                return Fail(error: error).eraseToAnyPublisher()
+            }
+        #endif
         
         
         let decoder = JSONDecoder()
