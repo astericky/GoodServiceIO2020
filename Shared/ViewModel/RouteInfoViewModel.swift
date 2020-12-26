@@ -23,26 +23,8 @@ final class RouteInfoViewModel: ObservableObject {
  
 
     init() {
-//        #if DEBUG
-//        self.timestamp = routesInfo.timestamp
-//        self.routes = routesInfo.routes.map(Route.init(item:))
-//        self.boroughs = routesInfo.lines.map { boroughs in
-//            let lines = boroughs.value.map { line -> Line in
-//                let lineRoutes = line.routes.flatMap { route in
-//                    return self.routes.filter {
-//                        return $0.id == route.id
-//                    }
-//                }
-//                return Line(item: line, routes: lineRoutes)
-//            }
-//            return Borough.init(name: boroughs.key, lines: lines)
-//        }
-//
-//        self.slowZones = self.getSlowLines()
-//        #else
-        self.fetchRouteMap()
+//        self.fetchRouteMap()
         self.fetchRouteInfo()
-//        #endif
     }
     
     
@@ -75,11 +57,16 @@ final class RouteInfoViewModel: ObservableObject {
                 receiveValue: { [weak self] info in
                     guard let self = self else { return }
                     self.datetime = {
+                        let isoDate = info.timestamp
                         let dateFormatter = DateFormatter()
                         dateFormatter.dateFormat = "MMM dd, yyyy h:mm a"
-                        return dateFormatter.string(from: info.timestamp)
+                        if let date = dateFormatter.date(from: isoDate) {
+                            return dateFormatter.string(from: date)
+                        }
+                        return "Date unknown."
                     }()
                     self.routes = info.routes.map(RouteViewModel.init(item:))
+                    print(self.routes.count)
                     self.boroughs = info.lines.map { boroughs in
                         BoroughViewModel(name: boroughs.key,
                                          lines: LinesViewModel(lineItems: boroughs.value))

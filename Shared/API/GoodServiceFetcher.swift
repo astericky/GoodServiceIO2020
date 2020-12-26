@@ -28,7 +28,7 @@ extension GoodServiceFetcher: GoodServiceFetchable {
     
     func getInfo() -> AnyPublisher<InfoResponse, GoodServiceError> {
         #if DEBUG
-            guard let url = GoodServiceFetcher.infoURL else {
+            guard let url = GoodServiceFetcher.bundleInfoURL else {
                 let error = GoodServiceError.network(description: "Couldn't create url.")
                 return Fail(error: error).eraseToAnyPublisher()
             }

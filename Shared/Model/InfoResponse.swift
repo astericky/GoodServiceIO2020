@@ -10,7 +10,7 @@ import Foundation
 
 
 struct InfoResponse: Codable {
-    let timestamp: Date
+    let timestamp: String
     let routes: [InfoResponse.Route]
     let lines: [String: [InfoResponse.Line]]
     
@@ -44,7 +44,7 @@ struct InfoResponse: Codable {
     }
     
     struct RouteDirection: Codable {
-        let name: String
+        let name: String?
         let parentName: String
         let maxActualWait: Int?
         let maxScheduledWait: Int?
@@ -52,7 +52,7 @@ struct InfoResponse: Codable {
         let delay: Int?
         
         enum CodingKeys: String, CodingKey {
-            case name = "name"
+            case name
             case parentName = "parent_name"
             case maxActualWait = "max_actual_headway"
             case maxScheduledWait =  "max_scheduled_headway"

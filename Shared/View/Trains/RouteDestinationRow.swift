@@ -10,6 +10,7 @@ import SwiftUI
 struct RouteDestinationRow: View {
     var direction: RouteDirection
     let columns: [GridItem] = Array(repeating: .init(.fixed(80), spacing: 8), count: 4)
+    
     var body: some View {
         VStack {
             HStack {
@@ -26,7 +27,8 @@ struct RouteDestinationRow: View {
                 }
             }
         }
-            .background(Color(red: 0.9333, green: 0.9333, blue: 0.9333))
+        .foregroundColor(.black)
+        .background(Color(red: 0.9333, green: 0.9333, blue: 0.9333))
     }
 }
 
@@ -65,6 +67,9 @@ struct RouteDirectionRow_Previews: PreviewProvider {
     static var directions = routesInfo.routes[20].south.map { RouteDirection(item: $0) }
     static var destination = RouteDestination(name: name, directions: directions)
     static var previews: some View {
-        RouteDestinationRow(direction: destination.directions[0])
+        Group {
+            RouteDestinationRow(direction: destination.directions[0])
+        }
+        
     }
 }

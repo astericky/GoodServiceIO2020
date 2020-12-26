@@ -12,11 +12,11 @@ struct RouteDirection: Identifiable {
     let item: InfoResponse.RouteDirection
     
     var id: String {
-        item.name
+        item.name ?? ""
     }
     
     var name: String {
-        item.name
+        item.name ?? ""
     }
     
     var parentName: String {
