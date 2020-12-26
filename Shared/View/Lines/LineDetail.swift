@@ -31,7 +31,7 @@ extension LineDetail {
     var header: some View {
         HStack {
             VStack(alignment: .leading) {
-                HorizontalRouteList(lineVM: line)
+                HorizontalRouteList(lineRouteVMArray: line.routes)
             }
             Spacer()
         }

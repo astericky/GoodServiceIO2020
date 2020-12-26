@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct HorizontalRouteList: View {
-    var lineVM: LineViewModel
+    var lineRouteVMArray: [LineRouteViewModel]
 
     var body: some View {
         HStack {
-            ForEach(lineVM.routes, id: \.self) { route in
+            ForEach(lineRouteVMArray, id: \.self) { route in
                 Text(route.name)
                     .minimumScaleFactor(0.6)
                     .foregroundColor(.white)
@@ -27,7 +27,7 @@ struct HorizontalRouteList: View {
 
 struct HorizontalRouteList_Previews: PreviewProvider {
     static var previews: some View {
-        HorizontalRouteList(lineVM: lines[0])
+        HorizontalRouteList(lineRouteVMArray: lines[0].routes)
     }
 }
 

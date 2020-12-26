@@ -39,16 +39,7 @@ extension LineDirectionRow {
                 .font(.system(size: 12))
                 .fontWeight(.bold)
                 .padding(.bottom, 2)
-            
-            HStack {
-                ForEach(direction.routes, id: \.self) { route in
-                    Text(route.name)
-                        .foregroundColor(.white)
-                        .frame(width: 25, height:25)
-                        .background(Color.createColor(from: route.color))
-                        .clipShape(Circle())
-                }
-            }
+            HorizontalRouteList(lineRouteVMArray: direction.routes)
         }
         .padding(.bottom, 8)
     }

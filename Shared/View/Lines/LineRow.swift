@@ -21,7 +21,7 @@ struct LineRow: View {
                 }
                 Spacer()
                 HStack(alignment: .bottom) {
-                    HorizontalRouteList(lineVM: line)
+                    HorizontalRouteList(lineRouteVMArray: line.routes)
                     Spacer()
                     Text(line.status)
                         .font(.caption)

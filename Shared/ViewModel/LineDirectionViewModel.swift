@@ -32,8 +32,8 @@ struct LineDirectionViewModel {
         direction.delay ?? 0
     }
     
-    var routes: [InfoResponse.Line.Route] {
-        direction.routes
+    var routes: [LineRouteViewModel] {
+        direction.routes.map(LineRouteViewModel.init(route:))
     }
 }
 

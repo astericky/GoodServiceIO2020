@@ -66,7 +66,6 @@ final class RouteInfoViewModel: ObservableObject {
                         return "Date unknown."
                     }()
                     self.routes = info.routes.map(RouteViewModel.init(item:))
-                    print(self.routes.count)
                     self.boroughs = info.lines.map { boroughs in
                         BoroughViewModel(name: boroughs.key,
                                          lines: LinesViewModel(lineItems: boroughs.value))
